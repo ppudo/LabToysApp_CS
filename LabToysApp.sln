@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabToysApp", "LabToysApp.csproj", "{C511452F-A888-40E0-8765-4AF8D873C77C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Devices", "Devices", "{55D6091E-CDF7-4A87-9F3F-2DC7B98334D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DeltaElektronika", "DeltaElektronika", "{F5C4AF6F-CDC8-4E38-B2E8-D56AA5571AC9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Rigol", "Rigol", "{173E01E3-7D1B-4FA1-9273-BC0897312298}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DS1000Z", "Devices\Rigol\DS1000Z\DS1000Z.csproj", "{76514DA5-52BC-4365-9544-AB69752B0D4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugDevice", "Devices\DebugDevice\DebugDevice.csproj", "{E8DD3BFA-499E-43F1-8D81-7F339B9C7A39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C511452F-A888-40E0-8765-4AF8D873C77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C511452F-A888-40E0-8765-4AF8D873C77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C511452F-A888-40E0-8765-4AF8D873C77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C511452F-A888-40E0-8765-4AF8D873C77C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76514DA5-52BC-4365-9544-AB69752B0D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76514DA5-52BC-4365-9544-AB69752B0D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76514DA5-52BC-4365-9544-AB69752B0D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76514DA5-52BC-4365-9544-AB69752B0D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DD3BFA-499E-43F1-8D81-7F339B9C7A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DD3BFA-499E-43F1-8D81-7F339B9C7A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DD3BFA-499E-43F1-8D81-7F339B9C7A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DD3BFA-499E-43F1-8D81-7F339B9C7A39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5C4AF6F-CDC8-4E38-B2E8-D56AA5571AC9} = {55D6091E-CDF7-4A87-9F3F-2DC7B98334D1}
+		{173E01E3-7D1B-4FA1-9273-BC0897312298} = {55D6091E-CDF7-4A87-9F3F-2DC7B98334D1}
+		{76514DA5-52BC-4365-9544-AB69752B0D4E} = {173E01E3-7D1B-4FA1-9273-BC0897312298}
+		{E8DD3BFA-499E-43F1-8D81-7F339B9C7A39} = {55D6091E-CDF7-4A87-9F3F-2DC7B98334D1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		BuildVersion_StartDate = 2021/10/26
+		BuildVersion_UpdateFileVersion = True
+		BuildVersion_UpdateAssemblyVersion = True
+		BuildVersion_BuildVersioningStyle = None.None.None.Increment
+		SolutionGuid = {B5B080A5-5DF1-4142-AAB9-5EF77F440A71}
+	EndGlobalSection
+EndGlobal

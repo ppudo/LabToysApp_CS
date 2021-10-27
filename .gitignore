@@ -1,0 +1,5 @@
+.vs/
+bin/
+Devices/DebugDevice/obj/
+Devices/Rigol/DS1000Z/obj/
+obj/
