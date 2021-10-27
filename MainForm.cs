@@ -58,6 +58,14 @@ namespace LabToysApp
         }
 
         //-----------------------------------------------------------------------------------------
+        private void tsmiGit_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+
+            System.Diagnostics.Process.Start((string)item.Tag);
+        }
+
+        //-----------------------------------------------------------------------------------------
         //LANGUAGE OPTIONS
         //-----------------------------------------------------------------------------------------
         private void tsmiLangDefault_Click(object sender, EventArgs e)
@@ -247,5 +255,7 @@ namespace LabToysApp
         }
 
         #endregion
+
+        
     }
 }

@@ -40,6 +40,8 @@ namespace LabToysApp
             this.llDaveGandy = new System.Windows.Forms.LinkLabel();
             this.llMonkik = new System.Windows.Forms.LinkLabel();
             this.llFreepik = new System.Windows.Forms.LinkLabel();
+            this.llFlatart = new System.Windows.Forms.LinkLabel();
+            this.llJulienMonty = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.gbImagesAuthors.SuspendLayout();
             this.SuspendLayout();
@@ -96,13 +98,15 @@ namespace LabToysApp
             this.gbImagesAuthors.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbImagesAuthors.Controls.Add(this.llJulienMonty);
+            this.gbImagesAuthors.Controls.Add(this.llFlatart);
             this.gbImagesAuthors.Controls.Add(this.llPixelPerfect);
             this.gbImagesAuthors.Controls.Add(this.llDaveGandy);
             this.gbImagesAuthors.Controls.Add(this.llMonkik);
             this.gbImagesAuthors.Controls.Add(this.llFreepik);
             this.gbImagesAuthors.Location = new System.Drawing.Point(12, 118);
             this.gbImagesAuthors.Name = "gbImagesAuthors";
-            this.gbImagesAuthors.Size = new System.Drawing.Size(264, 46);
+            this.gbImagesAuthors.Size = new System.Drawing.Size(264, 64);
             this.gbImagesAuthors.TabIndex = 9;
             this.gbImagesAuthors.TabStop = false;
             this.gbImagesAuthors.Text = "Images Authors";
@@ -110,7 +114,7 @@ namespace LabToysApp
             // llPixelPerfect
             // 
             this.llPixelPerfect.AutoSize = true;
-            this.llPixelPerfect.Location = new System.Drawing.Point(174, 16);
+            this.llPixelPerfect.Location = new System.Drawing.Point(53, 38);
             this.llPixelPerfect.Name = "llPixelPerfect";
             this.llPixelPerfect.Size = new System.Drawing.Size(65, 13);
             this.llPixelPerfect.TabIndex = 3;
@@ -134,7 +138,7 @@ namespace LabToysApp
             // llMonkik
             // 
             this.llMonkik.AutoSize = true;
-            this.llMonkik.Location = new System.Drawing.Point(127, 16);
+            this.llMonkik.Location = new System.Drawing.Point(6, 38);
             this.llMonkik.Name = "llMonkik";
             this.llMonkik.Size = new System.Drawing.Size(41, 13);
             this.llMonkik.TabIndex = 1;
@@ -146,7 +150,7 @@ namespace LabToysApp
             // llFreepik
             // 
             this.llFreepik.AutoSize = true;
-            this.llFreepik.Location = new System.Drawing.Point(79, 16);
+            this.llFreepik.Location = new System.Drawing.Point(121, 16);
             this.llFreepik.Name = "llFreepik";
             this.llFreepik.Size = new System.Drawing.Size(42, 13);
             this.llFreepik.TabIndex = 0;
@@ -155,11 +159,35 @@ namespace LabToysApp
             this.llFreepik.Text = "Freepik";
             this.llFreepik.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llClick_LinkClicked);
             // 
+            // llFlatart
+            // 
+            this.llFlatart.AutoSize = true;
+            this.llFlatart.Location = new System.Drawing.Point(79, 16);
+            this.llFlatart.Name = "llFlatart";
+            this.llFlatart.Size = new System.Drawing.Size(36, 13);
+            this.llFlatart.TabIndex = 4;
+            this.llFlatart.TabStop = true;
+            this.llFlatart.Tag = "https://www.iconfinder.com/Flatart";
+            this.llFlatart.Text = "Flatart";
+            this.llFlatart.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llClick_LinkClicked);
+            // 
+            // llJulienMonty
+            // 
+            this.llJulienMonty.AutoSize = true;
+            this.llJulienMonty.Location = new System.Drawing.Point(166, 16);
+            this.llJulienMonty.Name = "llJulienMonty";
+            this.llJulienMonty.Size = new System.Drawing.Size(66, 13);
+            this.llJulienMonty.TabIndex = 5;
+            this.llJulienMonty.TabStop = true;
+            this.llJulienMonty.Tag = "https://icon-icons.com/users/5u5EKEMGUHKJo7iIylWrP/icon-sets/";
+            this.llJulienMonty.Text = "Julien Monty";
+            this.llJulienMonty.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llClick_LinkClicked);
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 176);
+            this.ClientSize = new System.Drawing.Size(299, 194);
             this.Controls.Add(this.gbImagesAuthors);
             this.Controls.Add(this.lbVersion);
             this.Controls.Add(this.lbEmail);
@@ -192,5 +220,7 @@ namespace LabToysApp
         private System.Windows.Forms.LinkLabel llDaveGandy;
         private System.Windows.Forms.LinkLabel llMonkik;
         private System.Windows.Forms.LinkLabel llFreepik;
+        private System.Windows.Forms.LinkLabel llFlatart;
+        private System.Windows.Forms.LinkLabel llJulienMonty;
     }
 }

@@ -152,7 +152,10 @@
     <None Include="Graphics\poland.png" />
     <Content Include="Graphics\arrow.png" />
     <Content Include="Graphics\bug.png" />
+    <None Include="Graphics\github.png" />
+    <None Include="Graphics\csharp.png" />
     <Content Include="Graphics\power-supply.png" />
+    <None Include="Graphics\python.png" />
     <Content Include="Graphics\Sources.txt" />
     <None Include="Graphics\oscilloscope.png" />
     <None Include="Graphics\window.png" />

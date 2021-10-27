@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="minus-red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Graphics\minus-red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="united-kingdom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Graphics\united-kingdom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Graphics\poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus-green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Graphics\plus-green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,16 +130,22 @@
   <data name="oscilloscope" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Graphics\oscilloscope.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="window" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Graphics\window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minus-red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Graphics\minus-red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="poland" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Graphics\poland.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="github" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Graphics\github.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="python" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Graphics\python.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="translate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Graphics\translate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="united-kingdom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Graphics\united-kingdom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="window" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Graphics\window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="csharp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Graphics\csharp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

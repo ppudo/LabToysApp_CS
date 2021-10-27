@@ -3,6 +3,10 @@
 		plus-green.png			- https://www.flaticon.com/free-icon/plus-black-symbol_25304		- https://www.flaticon.com/authors/dave-gandy		- Dave Gandy
 
 -------------------------------------------------
+Flatart
+		python.png				- https://www.iconfinder.com/icons/4518857/python_icon				- https://www.iconfinder.com/Flatart				- Flatart
+
+-------------------------------------------------
 Freepik
 		bug.png					- https://www.flaticon.com/free-icon/bug_784558						- https://www.flaticon.com/authors/freepik			- Freepik
 		poland.png				- https://www.flaticon.com/free-icon/republic-of-poland_197529		- https://www.flaticon.com/authors/freepik			- Freepik
@@ -10,7 +14,10 @@ Freepik
 		translate.png			- https://www.flaticon.com/free-icon/translate_281759				- https://www.flaticon.com/authors/freepik			- Freepik
 		united-kingdom.png		- https://www.flaticon.com/free-icon/united-kingdom_197374			- https://www.flaticon.com/authors/freepik			- Freepik
 		window.png				- https://www.flaticon.com/free-icon/size_2036429					- https://www.flaticon.com/authors/freepik			- Freepik
-		
+
+-------------------------------------------------
+Julien Monty
+		csharp.png				- https://icon-icons.com/icon/csharp-original-logo/146578			- https://icon-icons.com/users/5u5EKEMGUHKJo7iIylWrP/icon-sets/		- Julien Monty
 
 -------------------------------------------------
 monkik
@@ -19,4 +26,4 @@ monkik
 -------------------------------------------------
 Pixel perfect
 		arrow.png				- https://www.flaticon.com/free-icon/arrow_3388643					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
-
+		github.png				- https://www.flaticon.com/free-icon/github_733609					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect

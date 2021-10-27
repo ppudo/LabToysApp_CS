@@ -63,6 +63,26 @@ namespace LabToysApp.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap csharp {
+            get {
+                object obj = ResourceManager.GetObject("csharp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap github {
+            get {
+                object obj = ResourceManager.GetObject("github", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minus_red {
             get {
                 object obj = ResourceManager.GetObject("minus-red", resourceCulture);
@@ -96,6 +116,16 @@ namespace LabToysApp.Properties {
         internal static System.Drawing.Bitmap poland {
             get {
                 object obj = ResourceManager.GetObject("poland", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap python {
+            get {
+                object obj = ResourceManager.GetObject("python", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -38,6 +38,10 @@ namespace LabToysApp
             this.tsmiLangEnglish = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLangPoland = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGitHub = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGitLabtoysPython = new System.Windows.Forms.ToolStripMenuItem();
+            this.tamiGitLabToysCS = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGitLabToysAppCS = new System.Windows.Forms.ToolStripMenuItem();
             this.scMain = new System.Windows.Forms.SplitContainer();
             this.btSeparateWindow = new System.Windows.Forms.Button();
             this.btDeleteDevice = new System.Windows.Forms.Button();
@@ -55,7 +59,8 @@ namespace LabToysApp
             // 
             this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFile,
-            this.tsmiAbout});
+            this.tsmiAbout,
+            this.tsmiGitHub});
             this.msMain.Location = new System.Drawing.Point(0, 0);
             this.msMain.Name = "msMain";
             this.msMain.Size = new System.Drawing.Size(868, 24);
@@ -112,6 +117,44 @@ namespace LabToysApp
             this.tsmiAbout.Size = new System.Drawing.Size(52, 20);
             this.tsmiAbout.Text = "About";
             this.tsmiAbout.Click += new System.EventHandler(this.tsmiAbout_Click);
+            // 
+            // tsmiGitHub
+            // 
+            this.tsmiGitHub.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiGitLabtoysPython,
+            this.tamiGitLabToysCS,
+            this.tsmiGitLabToysAppCS});
+            this.tsmiGitHub.Image = global::LabToysApp.Properties.Resources.github;
+            this.tsmiGitHub.Name = "tsmiGitHub";
+            this.tsmiGitHub.Size = new System.Drawing.Size(73, 20);
+            this.tsmiGitHub.Text = "GitHub";
+            // 
+            // tsmiGitLabtoysPython
+            // 
+            this.tsmiGitLabtoysPython.Image = global::LabToysApp.Properties.Resources.python;
+            this.tsmiGitLabtoysPython.Name = "tsmiGitLabtoysPython";
+            this.tsmiGitLabtoysPython.Size = new System.Drawing.Size(180, 22);
+            this.tsmiGitLabtoysPython.Tag = "https://github.com/ppudo/labtoys_python";
+            this.tsmiGitLabtoysPython.Text = "labtoys - python";
+            this.tsmiGitLabtoysPython.Click += new System.EventHandler(this.tsmiGit_Click);
+            // 
+            // tamiGitLabToysCS
+            // 
+            this.tamiGitLabToysCS.Image = global::LabToysApp.Properties.Resources.csharp;
+            this.tamiGitLabToysCS.Name = "tamiGitLabToysCS";
+            this.tamiGitLabToysCS.Size = new System.Drawing.Size(180, 22);
+            this.tamiGitLabToysCS.Tag = "https://github.com/ppudo/LabToys_Csharp";
+            this.tamiGitLabToysCS.Text = "LabToys - C#";
+            this.tamiGitLabToysCS.Click += new System.EventHandler(this.tsmiGit_Click);
+            // 
+            // tsmiGitLabToysAppCS
+            // 
+            this.tsmiGitLabToysAppCS.Image = global::LabToysApp.Properties.Resources.csharp;
+            this.tsmiGitLabToysAppCS.Name = "tsmiGitLabToysAppCS";
+            this.tsmiGitLabToysAppCS.Size = new System.Drawing.Size(180, 22);
+            this.tsmiGitLabToysAppCS.Tag = "https://github.com/ppudo/LabToysApp_CS";
+            this.tsmiGitLabToysAppCS.Text = "LabToysApp - C#";
+            this.tsmiGitLabToysAppCS.Click += new System.EventHandler(this.tsmiGit_Click);
             // 
             // scMain
             // 
@@ -233,6 +276,10 @@ namespace LabToysApp
         private System.Windows.Forms.ToolStripMenuItem tsmiLangDefault;
         private System.Windows.Forms.ToolStripMenuItem tsmiLangEnglish;
         private System.Windows.Forms.ToolStripMenuItem tsmiLangPoland;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGitHub;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGitLabtoysPython;
+        private System.Windows.Forms.ToolStripMenuItem tamiGitLabToysCS;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGitLabToysAppCS;
     }
 }
 

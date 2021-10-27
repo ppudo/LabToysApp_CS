@@ -1,4 +1,4 @@
-# LabToys C#
+# LabToysApp C#
 Application for use with laboratory equipment
 
 
