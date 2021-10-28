@@ -1,6 +1,7 @@
 ﻿Freepik
 		bug.png					- https://www.flaticon.com/free-icon/bug_784558						- https://www.flaticon.com/authors/freepik			- Freepik
 		power-supply.png		- https://www.flaticon.com/free-icon/power-supply_1699453			- https://www.flaticon.com/authors/freepik			- Freepik
+		sequencer.png			- https://www.flaticon.com/premium-icon/planning_4187406			- https://www.flaticon.com/authors/freepik			- Freepik
 
 -------------------------------------------------
 Pixel perfect

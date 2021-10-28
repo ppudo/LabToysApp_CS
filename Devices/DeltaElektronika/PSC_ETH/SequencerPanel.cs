@@ -8,13 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LabToys.DeltaElektronika;
-using System.IO;
 
 namespace DeltaElektronika.PSC_ETH
 {
-    public partial class HomePanel : UserControl
+    public partial class SequencerPanel : UserControl
     {
-        public HomePanel(LabToys.DeltaElektronika.PSC_ETH device, string lang="" )
+        public SequencerPanel(LabToys.DeltaElektronika.PSC_ETH device, string lang = "")
         {
             InitializeComponent();
 
@@ -57,80 +56,55 @@ namespace DeltaElektronika.PSC_ETH
             SetLanguage(lang);
         }
 
-        //-----------------------------------------------------------------------------------------
-        private void btOutput_Click(object sender, EventArgs e)
+        //-------------------------------------------------------------------------------------------------------------------------------------------
+        private void btRefreshCatalog_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-
             Cursor.Current = Cursors.WaitCursor;
 
-            if ( btn.BackColor == SystemColors.ControlDark )
-            {
-                if( device.EnableOutput() )
-                {
-                    btn.BackColor = Color.Red;
-                    btn.Text = "Output ON";
-                }
-            }
-            else
-            {
-                if( device.DisableOutput() )
-                {
-                    btn.BackColor = SystemColors.ControlDark;
-                    btn.Text = "Output OFF";
-                }
-            }
-
-            Cursor.Current = Cursors.Default;
-        }
-
-        //-----------------------------------------------------------------------------------------
-        private void nudVoltage_ValueChanged(object sender, EventArgs e)
-        {
-            NumericUpDown numeric = (NumericUpDown)sender;
-
-            Cursor.Current = Cursors.WaitCursor;
-
-            if ( !device.SetOutputVoltage((float)numeric.Value) )
-            {
-
-            }
-
-            Cursor.Current = Cursors.Default;
-        }
-
-        //-----------------------------------------------------------------------------------------
-        private void nudCurrent_ValueChanged(object sender, EventArgs e)
-        {
-            NumericUpDown numeric = (NumericUpDown)sender;
-
-            Cursor.Current = Cursors.WaitCursor;
-
-            if (!device.SetOutputCurrent((float)numeric.Value))
-            {
-
-            }
-
-            Cursor.Current = Cursors.Default;
-        }
-
-        //-----------------------------------------------------------------------------------------
-        private void btOutputX_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            int idx = int.Parse((string)btn.Text);
-            int mask = 1 << idx;
-
-            Cursor.Current = Cursors.WaitCursor;
-
-            int state = device.GetDigitalOutputs();
-            if( state == int.MinValue )
+            lbCatalog.Items.Clear();
+            string[] catalog = device.GetSequenceCatalog();
+            if( catalog.Length == 0 )
             {
                 return;
             }
 
-            state = state & mask;
-            if( !device.SetDigitalOutputs(state) )
+            for( int i=0; i<catalog.Length; i++ )
+            {
+                lbCatalog.Items.Add(catalog[i]);
+            }
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void lbCatalog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            ListBox box = (ListBox)sender;
+
+            if( box.SelectedItem.GetType() == typeof( string ) )
+            {
+                string selectedSequence = (string)box.SelectedItem;
+                if( !device.SelectSequence( selectedSequence ) )
+                {
+                    tbSequenceName.Text = "";
+                    return;
+                }
+
+                tbSequenceName.Text = selectedSequence;
+                return;
+            }
+
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btDeleteSequence_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            if ( !device.DeleteSelectedSequence() )
             {
 
             }
@@ -139,20 +113,36 @@ namespace DeltaElektronika.PSC_ETH
         }
 
         //-----------------------------------------------------------------------------------------
-        private void btRefresh_Click(object sender, EventArgs e)
+        private void tbSequenceName_TextChanged(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            TextBox box = (TextBox)sender;
 
-            if( btn.BackColor == SystemColors.ControlDark )
+            if( box.Text == "" )
             {
-                btn.BackColor = Color.LightGreen;
-                btn.Text = "Refresh enabled";
+                gbSequenceControl.Enabled = false;
             }
             else
             {
-                btn.BackColor = SystemColors.ControlDark;
-                btn.Text = "Refresh disabled";
+                gbSequenceControl.Enabled = true;
+
+                dgvSequence.Rows.Clear();
+                string[] sequence = device.GetCompleteSequence();
+                if( sequence.Length == 0 )
+                {
+                    Cursor.Current = Cursors.Default;
+                    return;
+                }
+
+                for( int i=0; i<sequence.Length; i++ )
+                {
+                    int idx = dgvSequence.Rows.Add();
+                    DataGridViewRow row = dgvSequence.Rows[idx];
+                    row.Cells[0].Value = i + 1;
+                    row.Cells[1].Value = sequence[i];
+                }
             }
+
+            Cursor.Current = Cursors.Default;
         }
     }
 }

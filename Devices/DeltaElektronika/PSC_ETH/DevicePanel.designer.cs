@@ -31,10 +31,11 @@
             this.tsContainer = new System.Windows.Forms.ToolStripContainer();
             this.tsPSC_ETH = new System.Windows.Forms.ToolStrip();
             this.tslName = new System.Windows.Forms.ToolStripLabel();
-            this.tstbError = new System.Windows.Forms.ToolStripTextBox();
             this.tsbtHome = new System.Windows.Forms.ToolStripButton();
+            this.tsbtSequencer = new System.Windows.Forms.ToolStripButton();
             this.tsbtInfo = new System.Windows.Forms.ToolStripButton();
             this.tsbtDebug = new System.Windows.Forms.ToolStripButton();
+            this.tstbError = new System.Windows.Forms.ToolStripTextBox();
             this.tsContainer.TopToolStripPanel.SuspendLayout();
             this.tsContainer.SuspendLayout();
             this.tsPSC_ETH.SuspendLayout();
@@ -67,12 +68,13 @@
             this.tsPSC_ETH.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslName,
             this.tsbtHome,
+            this.tsbtSequencer,
             this.tsbtInfo,
             this.tsbtDebug,
             this.tstbError});
             this.tsPSC_ETH.Location = new System.Drawing.Point(3, 0);
             this.tsPSC_ETH.Name = "tsPSC_ETH";
-            this.tsPSC_ETH.Size = new System.Drawing.Size(259, 25);
+            this.tsPSC_ETH.Size = new System.Drawing.Size(251, 25);
             this.tsPSC_ETH.TabIndex = 1;
             // 
             // tslName
@@ -80,13 +82,6 @@
             this.tslName.Name = "tslName";
             this.tslName.Size = new System.Drawing.Size(54, 22);
             this.tslName.Text = "PSC_ETH";
-            // 
-            // tstbError
-            // 
-            this.tstbError.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tstbError.Name = "tstbError";
-            this.tstbError.ReadOnly = true;
-            this.tstbError.Size = new System.Drawing.Size(100, 25);
             // 
             // tsbtHome
             // 
@@ -96,6 +91,15 @@
             this.tsbtHome.Name = "tsbtHome";
             this.tsbtHome.Size = new System.Drawing.Size(23, 22);
             this.tsbtHome.Click += new System.EventHandler(this.tsbChangePanel_Click);
+            // 
+            // tsbtSequencer
+            // 
+            this.tsbtSequencer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtSequencer.Image = global::DeltaElektronika.Properties.Resources.sequencer;
+            this.tsbtSequencer.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtSequencer.Name = "tsbtSequencer";
+            this.tsbtSequencer.Size = new System.Drawing.Size(23, 22);
+            this.tsbtSequencer.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
             // tsbtInfo
             // 
@@ -114,6 +118,12 @@
             this.tsbtDebug.Name = "tsbtDebug";
             this.tsbtDebug.Size = new System.Drawing.Size(23, 22);
             this.tsbtDebug.Click += new System.EventHandler(this.tsbChangePanel_Click);
+            // 
+            // tstbError
+            // 
+            this.tstbError.Name = "tstbError";
+            this.tstbError.ReadOnly = true;
+            this.tstbError.Size = new System.Drawing.Size(100, 25);
             // 
             // DevicePanel
             // 
@@ -141,5 +151,6 @@
         private System.Windows.Forms.ToolStripButton tsbtInfo;
         private System.Windows.Forms.ToolStripButton tsbtDebug;
         private System.Windows.Forms.ToolStripTextBox tstbError;
+        private System.Windows.Forms.ToolStripButton tsbtSequencer;
     }
 }
