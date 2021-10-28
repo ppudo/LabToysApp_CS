@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DS1000Z.Lang {
+namespace Rigol.Lang.DS1000Z {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace DS1000Z.Lang {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DS1000Z.Lang.HomePanel", typeof(HomePanel).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rigol.Lang.DS1000Z.HomePanel", typeof(HomePanel).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76514DA5-52BC-4365-9544-AB69752B0D4E}</ProjectGuid>
+    <ProjectGuid>{01845569-7C65-4E3C-9FFB-9061C4110B07}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>DS1000Z</RootNamespace>
-    <AssemblyName>DS1000Z</AssemblyName>
+    <RootNamespace>Rigol</RootNamespace>
+    <AssemblyName>Rigol</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,7 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LabToys">
-      <HintPath>..\..\..\..\LabToys\bin\Debug\LabToys.dll</HintPath>
+      <HintPath>..\..\..\LabToys\bin\Debug\LabToys.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,48 +45,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddForm.cs">
+    <Compile Include="DS1000Z\AddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddForm.Designer.cs">
+    <Compile Include="DS1000Z\AddForm.designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DebugPanel.cs">
+    <Compile Include="DS1000Z\DebugPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DebugPanel.Designer.cs">
+    <Compile Include="DS1000Z\DebugPanel.designer.cs">
       <DependentUpon>DebugPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="DevicePanel.cs">
+    <Compile Include="DS1000Z\DevicePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DevicePanel.Designer.cs">
+    <Compile Include="DS1000Z\DevicePanel.designer.cs">
       <DependentUpon>DevicePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Graphics\Test.cs" />
-    <Compile Include="HomePanel.cs">
+    <Compile Include="DS1000Z\HomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomePanel.Designer.cs">
+    <Compile Include="DS1000Z\HomePanel.designer.cs">
       <DependentUpon>HomePanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoPanel.cs">
+    <Compile Include="DS1000Z\InfoPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="InfoPanel.Designer.cs">
+    <Compile Include="DS1000Z\InfoPanel.designer.cs">
       <DependentUpon>InfoPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Lang\AddForm.Designer.cs">
+    <Compile Include="Lang\DS1000Z\AddForm.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AddForm.resx</DependentUpon>
     </Compile>
-    <Compile Include="Lang\DevicePanel.Designer.cs">
+    <Compile Include="Lang\DS1000Z\DevicePanel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DevicePanel.resx</DependentUpon>
     </Compile>
-    <Compile Include="Lang\HomePanel.Designer.cs">
+    <Compile Include="Lang\DS1000Z\HomePanel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HomePanel.resx</DependentUpon>
@@ -99,31 +98,32 @@
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="AddForm.resx">
+    <EmbeddedResource Include="DS1000Z\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DebugPanel.resx">
+    <EmbeddedResource Include="DS1000Z\DebugPanel.resx">
       <DependentUpon>DebugPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DevicePanel.resx">
+    <EmbeddedResource Include="DS1000Z\DevicePanel.resx">
       <DependentUpon>DevicePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePanel.resx">
+    <EmbeddedResource Include="DS1000Z\HomePanel.resx">
       <DependentUpon>HomePanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoPanel.resx">
+    <EmbeddedResource Include="DS1000Z\InfoPanel.resx">
       <DependentUpon>InfoPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lang\AddForm.resx">
+    <EmbeddedResource Include="Lang\DS1000Z\AddForm.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AddForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lang\DevicePanel.resx">
+    <EmbeddedResource Include="Lang\DS1000Z\DevicePanel.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DevicePanel.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lang\HomePanel.resx">
+    <EmbeddedResource Include="Lang\DS1000Z\HomePanel.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>HomePanel.Designer.cs</LastGenOutput>
     </EmbeddedResource>
@@ -133,25 +133,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Graphics\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Graphics\info.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Graphics\oscilloscope.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Graphics\bug.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Graphics\oscilloscope.ico" />
-    <Content Include="Graphics\Sources.txt" />
+    <Content Include="DS1000Z\Graphics\bug.png" />
+    <Content Include="DS1000Z\Graphics\home.png" />
+    <Content Include="DS1000Z\Graphics\info.png" />
+    <Content Include="DS1000Z\Graphics\oscilloscope.ico" />
+    <Content Include="DS1000Z\Graphics\oscilloscope.png" />
+    <Content Include="DS1000Z\Graphics\Sources.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/26" />
+      <UserProperties BuildVersion_StartDate="2021/10/26" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

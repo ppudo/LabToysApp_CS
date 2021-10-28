@@ -1,5 +1,5 @@
 ﻿
-namespace DS1000Z
+namespace Rigol.DS1000Z
 {
     partial class InfoPanel
     {
@@ -160,7 +160,7 @@ namespace DS1000Z
             // 
             // pbImage
             // 
-            this.pbImage.Image = global::DS1000Z.Properties.Resources.oscilloscope;
+            this.pbImage.Image = global::Rigol.Properties.Resources.oscilloscope;
             this.pbImage.Location = new System.Drawing.Point(3, 3);
             this.pbImage.Name = "pbImage";
             this.pbImage.Size = new System.Drawing.Size(100, 100);

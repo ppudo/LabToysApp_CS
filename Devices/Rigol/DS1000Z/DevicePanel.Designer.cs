@@ -1,4 +1,4 @@
-﻿namespace DS1000Z
+﻿namespace Rigol.DS1000Z
 {
     partial class DevicePanel
     {
@@ -84,7 +84,7 @@
             // tsbtHome
             // 
             this.tsbtHome.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtHome.Image = global::DS1000Z.Properties.Resources.home;
+            this.tsbtHome.Image = global::Rigol.Properties.Resources.home;
             this.tsbtHome.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtHome.Name = "tsbtHome";
             this.tsbtHome.Size = new System.Drawing.Size(23, 22);
@@ -93,7 +93,7 @@
             // tsbtInfo
             // 
             this.tsbtInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtInfo.Image = global::DS1000Z.Properties.Resources.info;
+            this.tsbtInfo.Image = global::Rigol.Properties.Resources.info;
             this.tsbtInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtInfo.Name = "tsbtInfo";
             this.tsbtInfo.Size = new System.Drawing.Size(23, 22);
@@ -102,7 +102,7 @@
             // tsbtDebug
             // 
             this.tsbtDebug.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtDebug.Image = global::DS1000Z.Properties.Resources.bug;
+            this.tsbtDebug.Image = global::Rigol.Properties.Resources.bug;
             this.tsbtDebug.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtDebug.Name = "tsbtDebug";
             this.tsbtDebug.Size = new System.Drawing.Size(23, 22);

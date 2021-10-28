@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DS1000Z;
+using Rigol.DS1000Z;
 
 namespace LabToysApp
 {
@@ -161,7 +161,7 @@ namespace LabToysApp
         // RIGOL
         private readonly static Model[] rigol = new Model[]
         {
-            new Model( "DS1000Z", typeof( DS1000Z.AddForm ) )
+            new Model( "DS1000Z", typeof( AddForm ) )
         };
 
         //-----------------------------------------------------------------------------------------

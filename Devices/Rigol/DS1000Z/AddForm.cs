@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LabToys.Rigol;
 
-namespace DS1000Z
+namespace Rigol.DS1000Z
 {
     public partial class AddForm : Form
     {
@@ -48,14 +48,14 @@ namespace DS1000Z
 
             //-----------------------------------
             //change label in app
-            this.Text = Lang.AddForm.AddForm_Text;
-            this.lbName.Text = Lang.AddForm.lbName_Text;
-            this.chbLan.Text = Lang.AddForm.chbLAN_Text;
-            this.gbLan.Text = Lang.AddForm.gbLAN_Text;
-            this.lbIPaddress.Text = Lang.AddForm.lbIPaddress_Text;
-            this.lbPort.Text = Lang.AddForm.lbPort_Text;
-            this.btCancel.Text = Lang.AddForm.btCancel_Text;
-            this.btAdd.Text = Lang.AddForm.btAdd_Text;
+            this.Text = Lang.DS1000Z.AddForm.AddForm_Text;
+            this.lbName.Text = Lang.DS1000Z.AddForm.lbName_Text;
+            this.chbLan.Text = Lang.DS1000Z.AddForm.chbLAN_Text;
+            this.gbLan.Text = Lang.DS1000Z.AddForm.gbLAN_Text;
+            this.lbIPaddress.Text = Lang.DS1000Z.AddForm.lbIPaddress_Text;
+            this.lbPort.Text = Lang.DS1000Z.AddForm.lbPort_Text;
+            this.btCancel.Text = Lang.DS1000Z.AddForm.btCancel_Text;
+            this.btAdd.Text = Lang.DS1000Z.AddForm.btAdd_Text;
         }
 
         //-----------------------------------------------------------------------------------------
@@ -71,7 +71,7 @@ namespace DS1000Z
             if (tbIPaddress.Text == "")
             {
                 //if no ip return error
-                MessageBox.Show(Lang.AddForm.WrongIPAddress_Text, Lang.AddForm.WrongIPAddress_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Lang.DS1000Z.AddForm.WrongIPAddress_Text, Lang.DS1000Z.AddForm.WrongIPAddress_Caption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }                                            
 

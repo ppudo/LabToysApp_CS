@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Ogólne informacje o zestawie są kontrolowane poprzez następujący 
 // zestaw atrybutów. Zmień wartości tych atrybutów, aby zmodyfikować informacje
 // skojarzone z zestawem.
-[assembly: AssemblyTitle("DS1000Z")]
+[assembly: AssemblyTitle("Rigol")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DS1000Z")]
+[assembly: AssemblyProduct("Rigol")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Następujący identyfikator GUID jest identyfikatorem biblioteki typów w przypadku udostępnienia tego projektu w modelu COM
-[assembly: Guid("76514da5-52bc-4365-9544-ab69752b0d4e")]
+[assembly: Guid("01845569-7c65-4e3c-9ffb-9061c4110b07")]
 
 // Informacje o wersji zestawu zawierają następujące cztery wartości:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // Możesz określić wszystkie wartości lub użyć domyślnych numerów kompilacji i poprawki
 // przy użyciu symbolu „*”, tak jak pokazano poniżej:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.0.3")]
-[assembly: AssemblyFileVersion("0.1.0.2")]
+[assembly: AssemblyVersion("0.1.1.1")]
+[assembly: AssemblyFileVersion("0.1.1.1")]

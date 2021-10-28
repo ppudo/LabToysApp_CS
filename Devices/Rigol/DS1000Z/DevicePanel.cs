@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LabToys.Rigol;
 
-namespace DS1000Z
+namespace Rigol.DS1000Z
 {
     public partial class DevicePanel: UserControl
     {
@@ -70,9 +70,9 @@ namespace DS1000Z
             }
 
             //change label in panel
-            tsbtHome.ToolTipText = Lang.DevicePanel.tsbtHome_ToolTip;
-            tsbtInfo.ToolTipText = Lang.DevicePanel.tsbtInfo_ToolTip;
-            tsbtDebug.ToolTipText = Lang.DevicePanel.tsbtDebug_ToolTip;
+            tsbtHome.ToolTipText = Lang.DS1000Z.DevicePanel.tsbtHome_ToolTip;
+            tsbtInfo.ToolTipText = Lang.DS1000Z.DevicePanel.tsbtInfo_ToolTip;
+            tsbtDebug.ToolTipText = Lang.DS1000Z.DevicePanel.tsbtDebug_ToolTip;
         }
 
         //-----------------------------------------------------------------------------------------

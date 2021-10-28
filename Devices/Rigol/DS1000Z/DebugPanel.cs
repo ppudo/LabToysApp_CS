@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LabToys.Rigol;
 
-namespace DS1000Z
+namespace Rigol.DS1000Z
 {
     public partial class DebugPanel : UserControl
     {

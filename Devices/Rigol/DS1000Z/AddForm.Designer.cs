@@ -1,5 +1,5 @@
 ﻿
-namespace DS1000Z
+namespace Rigol.DS1000Z
 {
     partial class AddForm
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DS1000Z.Properties {
+namespace Rigol.Lang.DS1000Z {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace DS1000Z.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class DevicePanel {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal DevicePanel() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace DS1000Z.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DS1000Z.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Rigol.Lang.DS1000Z.DevicePanel", typeof(DevicePanel).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,42 +61,29 @@ namespace DS1000Z.Properties {
         }
         
         /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Debug panel.
         /// </summary>
-        internal static System.Drawing.Bitmap bug {
+        internal static string tsbtDebug_ToolTip {
             get {
-                object obj = ResourceManager.GetObject("bug", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("tsbtDebug_ToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Main panel.
         /// </summary>
-        internal static System.Drawing.Bitmap home {
+        internal static string tsbtHome_ToolTip {
             get {
-                object obj = ResourceManager.GetObject("home", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("tsbtHome_ToolTip", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Device information.
         /// </summary>
-        internal static System.Drawing.Bitmap info {
+        internal static string tsbtInfo_ToolTip {
             get {
-                object obj = ResourceManager.GetObject("info", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap oscilloscope {
-            get {
-                object obj = ResourceManager.GetObject("oscilloscope", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("tsbtInfo_ToolTip", resourceCulture);
             }
         }
     }

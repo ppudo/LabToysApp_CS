@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using LabToys.Rigol;
 using System.IO;
 
-namespace DS1000Z
+namespace Rigol.DS1000Z
 {
     public partial class HomePanel : UserControl
     {
@@ -53,21 +53,21 @@ namespace DS1000Z
             }
 
             //change label in panel
-            lbTitle.Text = Lang.HomePanel.lbTitle_Text;
+            lbTitle.Text = Lang.DS1000Z.HomePanel.lbTitle_Text;
 
-            btAuto.Text = Lang.HomePanel.btAuto_Text;
-            btClear.Text = Lang.HomePanel.btClear_Text;
-            btRun.Text = Lang.HomePanel.btRun_Text;
-            btStop.Text = Lang.HomePanel.btStop_Text;
-            btSingle.Text = Lang.HomePanel.btSingle_Text;
-            btForce.Text = Lang.HomePanel.btForce_Text;
+            btAuto.Text = Lang.DS1000Z.HomePanel.btAuto_Text;
+            btClear.Text = Lang.DS1000Z.HomePanel.btClear_Text;
+            btRun.Text = Lang.DS1000Z.HomePanel.btRun_Text;
+            btStop.Text = Lang.DS1000Z.HomePanel.btStop_Text;
+            btSingle.Text = Lang.DS1000Z.HomePanel.btSingle_Text;
+            btForce.Text = Lang.DS1000Z.HomePanel.btForce_Text;
 
-            btSaveScreen.Text = Lang.HomePanel.btSaveScreen_Text;
-            gbScreen.Text = Lang.HomePanel.gbScreen_Text;
-            lbScreenFolder.Text = Lang.HomePanel.lbScreenFolder_Text;
-            lbScreenName.Text = Lang.HomePanel.lbScreenName_Text;
-            btScreenBrowse.Text = Lang.HomePanel.btScreenBrowse_Text;
-            lbScreenNo.Text = Lang.HomePanel.lbScreenNo_Text;
+            btSaveScreen.Text = Lang.DS1000Z.HomePanel.btSaveScreen_Text;
+            gbScreen.Text = Lang.DS1000Z.HomePanel.gbScreen_Text;
+            lbScreenFolder.Text = Lang.DS1000Z.HomePanel.lbScreenFolder_Text;
+            lbScreenName.Text = Lang.DS1000Z.HomePanel.lbScreenName_Text;
+            btScreenBrowse.Text = Lang.DS1000Z.HomePanel.btScreenBrowse_Text;
+            lbScreenNo.Text = Lang.DS1000Z.HomePanel.lbScreenNo_Text;
         }
 
         //-----------------------------------------------------------------------------------------
@@ -172,7 +172,7 @@ namespace DS1000Z
 
             if( !device.SaveScreenToImage(path) )
             {
-
+                
             }
             nudScreenNo.Value++;
 
