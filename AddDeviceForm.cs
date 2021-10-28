@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Rigol.DS1000Z;
+using DeltaElektronika.PSC_ETH;
 
 namespace LabToysApp
 {
@@ -75,13 +76,14 @@ namespace LabToysApp
 
             if (button.Enabled)
             {
-                Dictionary<int, Type> models = (Dictionary<int, Type>)cbModel.Tag;
-                Type formType = models[cbModel.SelectedIndex];
+                //Dictionary<int, Type> models = (Dictionary<int, Type>)cbModel.Tag;
+                Type formType = manufacturers[cbManufacturer.SelectedIndex].Models[cbModel.SelectedIndex].Form;
 
                 Form form = (Form)Activator.CreateInstance(formType, new object[] { LANGUAGE, DEBUG });
                 if (form.ShowDialog() == DialogResult.OK)
                 {
-                    deviceNode = new TreeNode(form.Text, 0, 2);
+                    int idx = manufacturers[cbManufacturer.SelectedIndex].Models[cbModel.SelectedIndex].ImageIndex;
+                    deviceNode = new TreeNode(form.Text, idx, 0);
                     deviceNode.Tag = form.Tag;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
@@ -92,17 +94,18 @@ namespace LabToysApp
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private void cbManufacturer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Dictionary<int, Model[]> dictonary = (Dictionary<int, Model[]>)cbManufacturer.Tag;
-            Model[] models = dictonary[cbManufacturer.SelectedIndex];
+            ComboBox box = (ComboBox)sender;
+            //Dictionary<int, Model[]> dictonary = (Dictionary<int, Model[]>)cbManufacturer.Tag;
+            //Model[] models = dictonary[cbManufacturer.SelectedIndex];
 
-            Dictionary<int, Type> modelDictionary = new Dictionary<int, Type>();
+            //Dictionary<int, Type> modelDictionary = new Dictionary<int, Type>();
 
-            for (int i = 0; i < models.Length; i++)
+            for (int i = 0; i < manufacturers[box.SelectedIndex].Models.Length; i++)
             {
-                int idx = cbModel.Items.Add(models[i].Name);
-                modelDictionary.Add(idx, models[i].Form);
+                int idx = cbModel.Items.Add(manufacturers[box.SelectedIndex].Models[i].Name);
+                //modelDictionary.Add(idx, models[i].Form);
             }
-            cbModel.Tag = modelDictionary;
+            //cbModel.Tag = modelDictionary;
             cbModel.Enabled = true;
         }
 
@@ -115,38 +118,41 @@ namespace LabToysApp
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private void LoadManufacturers()
         {
-            Dictionary<int, Model[]> dictonary = new Dictionary<int, Model[]>();
+            //Dictionary<int, Model[]> dictonary = new Dictionary<int, Model[]>();
 
             for (int i = 0; i < manufacturers.Length; i++)
             {
                 int idx = cbManufacturer.Items.Add(manufacturers[i].Name);
-                dictonary.Add(idx, manufacturers[i].Models);
+            //    dictonary.Add(idx, manufacturers[i].Models);
             }
-            cbManufacturer.Tag = dictonary;
+            //cbManufacturer.Tag = dictonary;
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private class Model
         {
-            public Model(string modelName, Type addForm)
+            public Model(string name, Type form, int imageIndex)
             {
-                name = modelName;
-                form = addForm;
+                this.name = name;
+                this.form = form;
+                this.imageIndex = imageIndex;
             }
 
             private string name = "";
             private Type form = null;
+            private int imageIndex = 0;
 
             public string Name { get => name; }
             public Type Form { get => form; }
+            public int ImageIndex { get => imageIndex; }
         }
 
         //-----------------------------------------------------------------------------------------
         private class Manufacturer
         {
-            public Manufacturer(string manufacturerName, Model[] modelsTab)
+            public Manufacturer(string name, Model[] modelsTab)
             {
-                name = manufacturerName;
+                this.name = name;
                 models = modelsTab;
             }
 
@@ -161,19 +167,19 @@ namespace LabToysApp
         // RIGOL
         private readonly static Model[] rigol = new Model[]
         {
-            new Model( "DS1000Z", typeof( AddForm ) )
+            new Model( "DS1000Z", typeof( Rigol.DS1000Z.AddForm ), 2 )
         };
 
         //-----------------------------------------------------------------------------------------
-        //private readonly static Model[] deltaElektronika = new Model[]
-        //{
-        //    new Model( "PSC-ETH", typeof( DS1000Z. ) )
-        //};
+        private readonly static Model[] deltaElektronika = new Model[]
+        {
+            new Model( "PSC-ETH", typeof( DeltaElektronika.PSC_ETH.AddForm ), 3 )
+        };
 
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private Manufacturer[] manufacturers = new Manufacturer[]
         {
-            //new Manufacturer( "Delta Elektronika", deltaElektronika ),
+            new Manufacturer( "Delta Elektronika", deltaElektronika ),
             new Manufacturer( "Rigol", rigol )
         };
     }

@@ -168,6 +168,10 @@
       <Project>{e8dd3bfa-499e-43f1-8d81-7f339b9c7a39}</Project>
       <Name>DebugDevice</Name>
     </ProjectReference>
+    <ProjectReference Include="Devices\DeltaElektronika\DeltaElektronika.csproj">
+      <Project>{afb5f126-6503-4064-bb44-fd7fc6b25603}</Project>
+      <Name>DeltaElektronika</Name>
+    </ProjectReference>
     <ProjectReference Include="Devices\Rigol\Rigol.csproj">
       <Project>{01845569-7c65-4e3c-9ffb-9061c4110b07}</Project>
       <Name>Rigol</Name>
@@ -176,7 +180,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/26" />
+      <UserProperties BuildVersion_StartDate="2021/10/26" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

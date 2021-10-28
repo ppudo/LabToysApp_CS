@@ -133,7 +133,7 @@ namespace LabToysApp
             // 
             this.tsmiGitLabtoysPython.Image = global::LabToysApp.Properties.Resources.python;
             this.tsmiGitLabtoysPython.Name = "tsmiGitLabtoysPython";
-            this.tsmiGitLabtoysPython.Size = new System.Drawing.Size(180, 22);
+            this.tsmiGitLabtoysPython.Size = new System.Drawing.Size(164, 22);
             this.tsmiGitLabtoysPython.Tag = "https://github.com/ppudo/labtoys_python";
             this.tsmiGitLabtoysPython.Text = "labtoys - python";
             this.tsmiGitLabtoysPython.Click += new System.EventHandler(this.tsmiGit_Click);
@@ -142,7 +142,7 @@ namespace LabToysApp
             // 
             this.tamiGitLabToysCS.Image = global::LabToysApp.Properties.Resources.csharp;
             this.tamiGitLabToysCS.Name = "tamiGitLabToysCS";
-            this.tamiGitLabToysCS.Size = new System.Drawing.Size(180, 22);
+            this.tamiGitLabToysCS.Size = new System.Drawing.Size(164, 22);
             this.tamiGitLabToysCS.Tag = "https://github.com/ppudo/LabToys_Csharp";
             this.tamiGitLabToysCS.Text = "LabToys - C#";
             this.tamiGitLabToysCS.Click += new System.EventHandler(this.tsmiGit_Click);
@@ -151,7 +151,7 @@ namespace LabToysApp
             // 
             this.tsmiGitLabToysAppCS.Image = global::LabToysApp.Properties.Resources.csharp;
             this.tsmiGitLabToysAppCS.Name = "tsmiGitLabToysAppCS";
-            this.tsmiGitLabToysAppCS.Size = new System.Drawing.Size(180, 22);
+            this.tsmiGitLabToysAppCS.Size = new System.Drawing.Size(164, 22);
             this.tsmiGitLabToysAppCS.Tag = "https://github.com/ppudo/LabToysApp_CS";
             this.tsmiGitLabToysAppCS.Text = "LabToysApp - C#";
             this.tsmiGitLabToysAppCS.Click += new System.EventHandler(this.tsmiGit_Click);

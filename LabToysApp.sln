@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DebugDevice", "Devices\Debu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigol", "Devices\Rigol\Rigol.csproj", "{01845569-7C65-4E3C-9FFB-9061C4110B07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeltaElektronika", "Devices\DeltaElektronika\DeltaElektronika.csproj", "{AFB5F126-6503-4064-BB44-FD7FC6B25603}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{01845569-7C65-4E3C-9FFB-9061C4110B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01845569-7C65-4E3C-9FFB-9061C4110B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01845569-7C65-4E3C-9FFB-9061C4110B07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFB5F126-6503-4064-BB44-FD7FC6B25603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFB5F126-6503-4064-BB44-FD7FC6B25603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFB5F126-6503-4064-BB44-FD7FC6B25603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFB5F126-6503-4064-BB44-FD7FC6B25603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,12 +42,13 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E8DD3BFA-499E-43F1-8D81-7F339B9C7A39} = {55D6091E-CDF7-4A87-9F3F-2DC7B98334D1}
 		{01845569-7C65-4E3C-9FFB-9061C4110B07} = {55D6091E-CDF7-4A87-9F3F-2DC7B98334D1}
+		{AFB5F126-6503-4064-BB44-FD7FC6B25603} = {55D6091E-CDF7-4A87-9F3F-2DC7B98334D1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		BuildVersion_StartDate = 2021/10/26
-		BuildVersion_UpdateFileVersion = True
-		BuildVersion_UpdateAssemblyVersion = True
-		BuildVersion_BuildVersioningStyle = None.None.None.Increment
 		SolutionGuid = {B5B080A5-5DF1-4142-AAB9-5EF77F440A71}
+		BuildVersion_BuildVersioningStyle = None.None.None.Increment
+		BuildVersion_UpdateAssemblyVersion = True
+		BuildVersion_UpdateFileVersion = True
+		BuildVersion_StartDate = 2021/10/26
 	EndGlobalSection
 EndGlobal

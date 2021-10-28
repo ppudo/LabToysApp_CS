@@ -193,6 +193,13 @@ namespace LabToysApp
             //-----------------------------------
             //change label in app
             this.Text = Lang.MainForm.MainForm_Text;
+            if( DEBUG )
+            {
+                this.Text = this.Text + " - v" + Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
+                                                Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString() + "." +
+                                                Assembly.GetExecutingAssembly().GetName().Version.Build.ToString() + "." +
+                                                Assembly.GetExecutingAssembly().GetName().Version.Revision.ToString();
+            }
 
             //msMain
             this.tsmiFile.Text = Lang.MainForm.tsmiFile_Text;
@@ -241,10 +248,6 @@ namespace LabToysApp
             else
             {
                 //Debug mode enabled
-                this.Text = this.Text + " - v" + Assembly.GetExecutingAssembly().GetName().Version.Major.ToString() + "." +
-                                                Assembly.GetExecutingAssembly().GetName().Version.Minor.ToString() + "." +
-                                                Assembly.GetExecutingAssembly().GetName().Version.Build.ToString() + "." +
-                                                Assembly.GetExecutingAssembly().GetName().Version.Revision.ToString();
 
                 //Add debug device
                 TreeNode debugNode = new TreeNode("Debug", 1, 0);
