@@ -249,6 +249,7 @@ namespace LabToysApp
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.msMain;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "LabToys";
             this.msMain.ResumeLayout(false);
             this.msMain.PerformLayout();

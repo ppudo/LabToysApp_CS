@@ -134,6 +134,8 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="PSC_ETH\Graphics\bug.png" />
+    <None Include="PSC_ETH\Graphics\edit.png" />
+    <None Include="PSC_ETH\Graphics\folder.png" />
     <Content Include="PSC_ETH\Graphics\home.png" />
     <Content Include="PSC_ETH\Graphics\info.png" />
     <None Include="PSC_ETH\Graphics\stop.png" />
@@ -142,6 +144,7 @@
     <None Include="PSC_ETH\Graphics\play.png" />
     <Content Include="PSC_ETH\Graphics\power-supply.png" />
     <None Include="PSC_ETH\Graphics\remove.png" />
+    <None Include="PSC_ETH\Graphics\save.png" />
     <Content Include="PSC_ETH\Graphics\sequencer.png" />
     <Content Include="PSC_ETH\Graphics\Sources.txt" />
   </ItemGroup>
