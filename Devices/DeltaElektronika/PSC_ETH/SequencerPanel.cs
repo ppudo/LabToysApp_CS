@@ -70,7 +70,10 @@ namespace DeltaElektronika.PSC_ETH
 
             for( int i=0; i<catalog.Length; i++ )
             {
-                lbCatalog.Items.Add(catalog[i]);
+                if( catalog[i] != "" )
+                {
+                    lbCatalog.Items.Add(catalog[i]);
+                }
             }
 
             Cursor.Current = Cursors.Default;
@@ -83,7 +86,8 @@ namespace DeltaElektronika.PSC_ETH
 
             ListBox box = (ListBox)sender;
 
-            if( box.SelectedItem.GetType() == typeof( string ) )
+            if( box.SelectedItem != null
+                && box.SelectedItem.GetType() == typeof( string ) )
             {
                 string selectedSequence = (string)box.SelectedItem;
                 if( !device.SelectSequence( selectedSequence ) )
@@ -102,14 +106,19 @@ namespace DeltaElektronika.PSC_ETH
         //-----------------------------------------------------------------------------------------
         private void btDeleteSequence_Click(object sender, EventArgs e)
         {
-            Cursor.Current = Cursors.WaitCursor;
-
-            if ( !device.DeleteSelectedSequence() )
+            if( MessageBox.Show( "Are you sure that you want to delete this sequence?", "Delete " + tbSequenceName.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question ) == DialogResult.Yes )
             {
+                Cursor.Current = Cursors.WaitCursor;
+                if (!device.DeleteSelectedSequence())
+                {
 
+                }
+                else
+                {
+                    tbSequenceName.Text = "";
+                }
+                Cursor.Current = Cursors.Default;
             }
-
-            Cursor.Current = Cursors.Default;
         }
 
         //-----------------------------------------------------------------------------------------
@@ -142,6 +151,39 @@ namespace DeltaElektronika.PSC_ETH
                 }
             }
 
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btPlay_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            if ( !device.StartSequence() )
+            {
+
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btPause_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            if (!device.PauseSequence())
+            {
+
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btStop_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            if (!device.StopSequence())
+            {
+
+            }
             Cursor.Current = Cursors.Default;
         }
     }

@@ -116,7 +116,7 @@ namespace DeltaElektronika.PSC_ETH
             this.nudPort.TabIndex = 3;
             this.nudPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudPort.Value = new decimal(new int[] {
-            5555,
+            8462,
             0,
             0,
             0});
