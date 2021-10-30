@@ -36,15 +36,6 @@ namespace DeltaElektronika.PSC_ETH
             this.lbCatalog = new System.Windows.Forms.ListBox();
             this.btRefreshCatalog = new System.Windows.Forms.Button();
             this.gbSequenceControl = new System.Windows.Forms.GroupBox();
-            this.btRefresh = new System.Windows.Forms.Button();
-            this.tbSequenceStatus = new System.Windows.Forms.TextBox();
-            this.dgvSequence = new System.Windows.Forms.DataGridView();
-            this.colIdx = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbSequenceName = new System.Windows.Forms.TextBox();
-            this.scSequencer = new System.Windows.Forms.SplitContainer();
-            this.btAddFile = new System.Windows.Forms.Button();
-            this.btAddSequence = new System.Windows.Forms.Button();
             this.btTrigger = new System.Windows.Forms.Button();
             this.btContinue = new System.Windows.Forms.Button();
             this.btNextStep = new System.Windows.Forms.Button();
@@ -53,7 +44,15 @@ namespace DeltaElektronika.PSC_ETH
             this.btStop = new System.Windows.Forms.Button();
             this.btPause = new System.Windows.Forms.Button();
             this.btPlay = new System.Windows.Forms.Button();
+            this.tbSequenceStatus = new System.Windows.Forms.TextBox();
+            this.dgvSequence = new System.Windows.Forms.DataGridView();
+            this.colIdx = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbSequenceName = new System.Windows.Forms.TextBox();
             this.btDeleteSequence = new System.Windows.Forms.Button();
+            this.scSequencer = new System.Windows.Forms.SplitContainer();
+            this.btAddFile = new System.Windows.Forms.Button();
+            this.btAddSequence = new System.Windows.Forms.Button();
             this.gbSequenceControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSequence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scSequencer)).BeginInit();
@@ -104,7 +103,6 @@ namespace DeltaElektronika.PSC_ETH
             this.gbSequenceControl.Controls.Add(this.btNextStep);
             this.gbSequenceControl.Controls.Add(this.btSave);
             this.gbSequenceControl.Controls.Add(this.btEdit);
-            this.gbSequenceControl.Controls.Add(this.btRefresh);
             this.gbSequenceControl.Controls.Add(this.btStop);
             this.gbSequenceControl.Controls.Add(this.btPause);
             this.gbSequenceControl.Controls.Add(this.btPlay);
@@ -119,144 +117,6 @@ namespace DeltaElektronika.PSC_ETH
             this.gbSequenceControl.TabIndex = 20;
             this.gbSequenceControl.TabStop = false;
             this.gbSequenceControl.Text = "Sequence Control";
-            // 
-            // btRefresh
-            // 
-            this.btRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btRefresh.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRefresh.Location = new System.Drawing.Point(386, 19);
-            this.btRefresh.Name = "btRefresh";
-            this.btRefresh.Size = new System.Drawing.Size(107, 23);
-            this.btRefresh.TabIndex = 27;
-            this.btRefresh.Text = "Refresh disabled";
-            this.btRefresh.UseVisualStyleBackColor = false;
-            // 
-            // tbSequenceStatus
-            // 
-            this.tbSequenceStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.tbSequenceStatus.Location = new System.Drawing.Point(186, 430);
-            this.tbSequenceStatus.Name = "tbSequenceStatus";
-            this.tbSequenceStatus.ReadOnly = true;
-            this.tbSequenceStatus.Size = new System.Drawing.Size(82, 20);
-            this.tbSequenceStatus.TabIndex = 3;
-            // 
-            // dgvSequence
-            // 
-            this.dgvSequence.AllowUserToAddRows = false;
-            this.dgvSequence.AllowUserToDeleteRows = false;
-            this.dgvSequence.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSequence.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSequence.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSequence.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colIdx,
-            this.colStep});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSequence.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSequence.Location = new System.Drawing.Point(6, 48);
-            this.dgvSequence.Name = "dgvSequence";
-            this.dgvSequence.ReadOnly = true;
-            this.dgvSequence.RowHeadersVisible = false;
-            this.dgvSequence.Size = new System.Drawing.Size(487, 376);
-            this.dgvSequence.TabIndex = 2;
-            // 
-            // colIdx
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colIdx.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colIdx.Frozen = true;
-            this.colIdx.HeaderText = "Idx";
-            this.colIdx.MinimumWidth = 30;
-            this.colIdx.Name = "colIdx";
-            this.colIdx.ReadOnly = true;
-            this.colIdx.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colIdx.Width = 40;
-            // 
-            // colStep
-            // 
-            this.colStep.Frozen = true;
-            this.colStep.HeaderText = "Step";
-            this.colStep.MinimumWidth = 50;
-            this.colStep.Name = "colStep";
-            this.colStep.ReadOnly = true;
-            this.colStep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colStep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colStep.Width = 200;
-            // 
-            // tbSequenceName
-            // 
-            this.tbSequenceName.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbSequenceName.Location = new System.Drawing.Point(6, 19);
-            this.tbSequenceName.Name = "tbSequenceName";
-            this.tbSequenceName.ReadOnly = true;
-            this.tbSequenceName.Size = new System.Drawing.Size(149, 23);
-            this.tbSequenceName.TabIndex = 1;
-            this.tbSequenceName.TextChanged += new System.EventHandler(this.tbSequenceName_TextChanged);
-            // 
-            // scSequencer
-            // 
-            this.scSequencer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.scSequencer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.scSequencer.Location = new System.Drawing.Point(3, 36);
-            this.scSequencer.Name = "scSequencer";
-            // 
-            // scSequencer.Panel1
-            // 
-            this.scSequencer.Panel1.Controls.Add(this.btAddFile);
-            this.scSequencer.Panel1.Controls.Add(this.btRefreshCatalog);
-            this.scSequencer.Panel1.Controls.Add(this.btAddSequence);
-            this.scSequencer.Panel1.Controls.Add(this.lbCatalog);
-            // 
-            // scSequencer.Panel2
-            // 
-            this.scSequencer.Panel2.Controls.Add(this.gbSequenceControl);
-            this.scSequencer.Size = new System.Drawing.Size(682, 472);
-            this.scSequencer.SplitterDistance = 173;
-            this.scSequencer.TabIndex = 22;
-            // 
-            // btAddFile
-            // 
-            this.btAddFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btAddFile.BackgroundImage = global::DeltaElektronika.Properties.Resources.folder;
-            this.btAddFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAddFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddFile.ForeColor = System.Drawing.SystemColors.Control;
-            this.btAddFile.Location = new System.Drawing.Point(39, 439);
-            this.btAddFile.Name = "btAddFile";
-            this.btAddFile.Size = new System.Drawing.Size(30, 30);
-            this.btAddFile.TabIndex = 22;
-            this.btAddFile.UseVisualStyleBackColor = true;
-            this.btAddFile.Click += new System.EventHandler(this.btAddFile_Click);
-            // 
-            // btAddSequence
-            // 
-            this.btAddSequence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btAddSequence.BackgroundImage = global::DeltaElektronika.Properties.Resources.plus;
-            this.btAddSequence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btAddSequence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAddSequence.ForeColor = System.Drawing.SystemColors.Control;
-            this.btAddSequence.Location = new System.Drawing.Point(3, 439);
-            this.btAddSequence.Name = "btAddSequence";
-            this.btAddSequence.Size = new System.Drawing.Size(30, 30);
-            this.btAddSequence.TabIndex = 21;
-            this.btAddSequence.UseVisualStyleBackColor = true;
             // 
             // btTrigger
             // 
@@ -367,6 +227,82 @@ namespace DeltaElektronika.PSC_ETH
             this.btPlay.UseVisualStyleBackColor = true;
             this.btPlay.Click += new System.EventHandler(this.btPlay_Click);
             // 
+            // tbSequenceStatus
+            // 
+            this.tbSequenceStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbSequenceStatus.Location = new System.Drawing.Point(186, 430);
+            this.tbSequenceStatus.Name = "tbSequenceStatus";
+            this.tbSequenceStatus.ReadOnly = true;
+            this.tbSequenceStatus.Size = new System.Drawing.Size(82, 20);
+            this.tbSequenceStatus.TabIndex = 3;
+            // 
+            // dgvSequence
+            // 
+            this.dgvSequence.AllowUserToAddRows = false;
+            this.dgvSequence.AllowUserToDeleteRows = false;
+            this.dgvSequence.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSequence.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSequence.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSequence.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colIdx,
+            this.colStep});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSequence.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvSequence.Location = new System.Drawing.Point(6, 48);
+            this.dgvSequence.Name = "dgvSequence";
+            this.dgvSequence.ReadOnly = true;
+            this.dgvSequence.RowHeadersVisible = false;
+            this.dgvSequence.Size = new System.Drawing.Size(487, 376);
+            this.dgvSequence.TabIndex = 2;
+            // 
+            // colIdx
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colIdx.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colIdx.Frozen = true;
+            this.colIdx.HeaderText = "Idx";
+            this.colIdx.MinimumWidth = 30;
+            this.colIdx.Name = "colIdx";
+            this.colIdx.ReadOnly = true;
+            this.colIdx.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colIdx.Width = 40;
+            // 
+            // colStep
+            // 
+            this.colStep.Frozen = true;
+            this.colStep.HeaderText = "Step";
+            this.colStep.MinimumWidth = 50;
+            this.colStep.Name = "colStep";
+            this.colStep.ReadOnly = true;
+            this.colStep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colStep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStep.Width = 200;
+            // 
+            // tbSequenceName
+            // 
+            this.tbSequenceName.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbSequenceName.Location = new System.Drawing.Point(6, 19);
+            this.tbSequenceName.Name = "tbSequenceName";
+            this.tbSequenceName.ReadOnly = true;
+            this.tbSequenceName.Size = new System.Drawing.Size(149, 23);
+            this.tbSequenceName.TabIndex = 1;
+            this.tbSequenceName.TextChanged += new System.EventHandler(this.tbSequenceName_TextChanged);
+            // 
             // btDeleteSequence
             // 
             this.btDeleteSequence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -380,6 +316,56 @@ namespace DeltaElektronika.PSC_ETH
             this.btDeleteSequence.TabIndex = 0;
             this.btDeleteSequence.UseVisualStyleBackColor = true;
             this.btDeleteSequence.Click += new System.EventHandler(this.btDeleteSequence_Click);
+            // 
+            // scSequencer
+            // 
+            this.scSequencer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.scSequencer.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.scSequencer.Location = new System.Drawing.Point(3, 36);
+            this.scSequencer.Name = "scSequencer";
+            // 
+            // scSequencer.Panel1
+            // 
+            this.scSequencer.Panel1.Controls.Add(this.btAddFile);
+            this.scSequencer.Panel1.Controls.Add(this.btRefreshCatalog);
+            this.scSequencer.Panel1.Controls.Add(this.btAddSequence);
+            this.scSequencer.Panel1.Controls.Add(this.lbCatalog);
+            // 
+            // scSequencer.Panel2
+            // 
+            this.scSequencer.Panel2.Controls.Add(this.gbSequenceControl);
+            this.scSequencer.Size = new System.Drawing.Size(682, 472);
+            this.scSequencer.SplitterDistance = 173;
+            this.scSequencer.TabIndex = 22;
+            // 
+            // btAddFile
+            // 
+            this.btAddFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btAddFile.BackgroundImage = global::DeltaElektronika.Properties.Resources.folder;
+            this.btAddFile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btAddFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAddFile.ForeColor = System.Drawing.SystemColors.Control;
+            this.btAddFile.Location = new System.Drawing.Point(39, 439);
+            this.btAddFile.Name = "btAddFile";
+            this.btAddFile.Size = new System.Drawing.Size(30, 30);
+            this.btAddFile.TabIndex = 22;
+            this.btAddFile.UseVisualStyleBackColor = true;
+            this.btAddFile.Click += new System.EventHandler(this.btAddFile_Click);
+            // 
+            // btAddSequence
+            // 
+            this.btAddSequence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btAddSequence.BackgroundImage = global::DeltaElektronika.Properties.Resources.plus;
+            this.btAddSequence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btAddSequence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btAddSequence.ForeColor = System.Drawing.SystemColors.Control;
+            this.btAddSequence.Location = new System.Drawing.Point(3, 439);
+            this.btAddSequence.Name = "btAddSequence";
+            this.btAddSequence.Size = new System.Drawing.Size(30, 30);
+            this.btAddSequence.TabIndex = 21;
+            this.btAddSequence.UseVisualStyleBackColor = true;
             // 
             // SequencerPanel
             // 
@@ -418,7 +404,6 @@ namespace DeltaElektronika.PSC_ETH
         private System.Windows.Forms.Button btPause;
         private System.Windows.Forms.Button btPlay;
         private System.Windows.Forms.TextBox tbSequenceStatus;
-        private System.Windows.Forms.Button btRefresh;
         private System.Windows.Forms.Button btEdit;
         private System.Windows.Forms.Button btSave;
         private System.Windows.Forms.Button btAddFile;

@@ -36,13 +36,14 @@ namespace DeltaElektronika.PSC_ETH
             this.tbMeasuredCurrent = new System.Windows.Forms.TextBox();
             this.btOutput = new System.Windows.Forms.Button();
             this.gbVoltage = new System.Windows.Forms.GroupBox();
+            this.btRemoteVoltage = new System.Windows.Forms.Button();
             this.gbCurrent = new System.Windows.Forms.GroupBox();
-            this.btRefresh = new System.Windows.Forms.Button();
+            this.btRemoteCurrent = new System.Windows.Forms.Button();
             this.gbInputs = new System.Windows.Forms.GroupBox();
             this.lbOutputH = new System.Windows.Forms.Label();
-            this.tbOutputH = new System.Windows.Forms.TextBox();
+            this.tbInputH = new System.Windows.Forms.TextBox();
             this.lbOutputG = new System.Windows.Forms.Label();
-            this.tbOutputG = new System.Windows.Forms.TextBox();
+            this.tbInputG = new System.Windows.Forms.TextBox();
             this.lbInputF = new System.Windows.Forms.Label();
             this.tbInputF = new System.Windows.Forms.TextBox();
             this.lbInputE = new System.Windows.Forms.Label();
@@ -50,9 +51,9 @@ namespace DeltaElektronika.PSC_ETH
             this.lbInputD = new System.Windows.Forms.Label();
             this.tbInputD = new System.Windows.Forms.TextBox();
             this.lbOutputC = new System.Windows.Forms.Label();
-            this.tbOutputC = new System.Windows.Forms.TextBox();
+            this.tbInputC = new System.Windows.Forms.TextBox();
             this.lbOutputB = new System.Windows.Forms.Label();
-            this.tbOutputB = new System.Windows.Forms.TextBox();
+            this.tbInputB = new System.Windows.Forms.TextBox();
             this.lbInputA = new System.Windows.Forms.Label();
             this.tbInputA = new System.Windows.Forms.TextBox();
             this.gbOutputs = new System.Windows.Forms.GroupBox();
@@ -68,8 +69,6 @@ namespace DeltaElektronika.PSC_ETH
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btRemoteVoltage = new System.Windows.Forms.Button();
-            this.btRemoteCurrent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).BeginInit();
             this.gbVoltage.SuspendLayout();
@@ -190,6 +189,19 @@ namespace DeltaElektronika.PSC_ETH
             this.gbVoltage.TabStop = false;
             this.gbVoltage.Text = "Voltage";
             // 
+            // btRemoteVoltage
+            // 
+            this.btRemoteVoltage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btRemoteVoltage.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btRemoteVoltage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRemoteVoltage.Location = new System.Drawing.Point(6, 71);
+            this.btRemoteVoltage.Name = "btRemoteVoltage";
+            this.btRemoteVoltage.Size = new System.Drawing.Size(61, 23);
+            this.btRemoteVoltage.TabIndex = 29;
+            this.btRemoteVoltage.Text = "Local";
+            this.btRemoteVoltage.UseVisualStyleBackColor = false;
+            this.btRemoteVoltage.Click += new System.EventHandler(this.btRemoteVoltage_Click);
+            // 
             // gbCurrent
             // 
             this.gbCurrent.Controls.Add(this.btRemoteCurrent);
@@ -202,25 +214,25 @@ namespace DeltaElektronika.PSC_ETH
             this.gbCurrent.TabStop = false;
             this.gbCurrent.Text = "Current";
             // 
-            // btRefresh
+            // btRemoteCurrent
             // 
-            this.btRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btRefresh.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRefresh.Location = new System.Drawing.Point(451, 3);
-            this.btRefresh.Name = "btRefresh";
-            this.btRefresh.Size = new System.Drawing.Size(107, 23);
-            this.btRefresh.TabIndex = 26;
-            this.btRefresh.Text = "Refresh disabled";
-            this.btRefresh.UseVisualStyleBackColor = false;
-            this.btRefresh.Click += new System.EventHandler(this.btRefresh_Click);
+            this.btRemoteCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btRemoteCurrent.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btRemoteCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRemoteCurrent.Location = new System.Drawing.Point(6, 71);
+            this.btRemoteCurrent.Name = "btRemoteCurrent";
+            this.btRemoteCurrent.Size = new System.Drawing.Size(61, 23);
+            this.btRemoteCurrent.TabIndex = 30;
+            this.btRemoteCurrent.Text = "Local";
+            this.btRemoteCurrent.UseVisualStyleBackColor = false;
+            this.btRemoteCurrent.Click += new System.EventHandler(this.btRemoteCurrent_Click);
             // 
             // gbInputs
             // 
             this.gbInputs.Controls.Add(this.lbOutputH);
-            this.gbInputs.Controls.Add(this.tbOutputH);
+            this.gbInputs.Controls.Add(this.tbInputH);
             this.gbInputs.Controls.Add(this.lbOutputG);
-            this.gbInputs.Controls.Add(this.tbOutputG);
+            this.gbInputs.Controls.Add(this.tbInputG);
             this.gbInputs.Controls.Add(this.lbInputF);
             this.gbInputs.Controls.Add(this.tbInputF);
             this.gbInputs.Controls.Add(this.lbInputE);
@@ -228,9 +240,9 @@ namespace DeltaElektronika.PSC_ETH
             this.gbInputs.Controls.Add(this.lbInputD);
             this.gbInputs.Controls.Add(this.tbInputD);
             this.gbInputs.Controls.Add(this.lbOutputC);
-            this.gbInputs.Controls.Add(this.tbOutputC);
+            this.gbInputs.Controls.Add(this.tbInputC);
             this.gbInputs.Controls.Add(this.lbOutputB);
-            this.gbInputs.Controls.Add(this.tbOutputB);
+            this.gbInputs.Controls.Add(this.tbInputB);
             this.gbInputs.Controls.Add(this.lbInputA);
             this.gbInputs.Controls.Add(this.tbInputA);
             this.gbInputs.Location = new System.Drawing.Point(3, 171);
@@ -249,18 +261,18 @@ namespace DeltaElektronika.PSC_ETH
             this.lbOutputH.TabIndex = 22;
             this.lbOutputH.Text = "H";
             // 
-            // tbOutputH
+            // tbInputH
             // 
-            this.tbOutputH.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tbOutputH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbOutputH.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbOutputH.Location = new System.Drawing.Point(209, 32);
-            this.tbOutputH.Name = "tbOutputH";
-            this.tbOutputH.ReadOnly = true;
-            this.tbOutputH.Size = new System.Drawing.Size(23, 23);
-            this.tbOutputH.TabIndex = 21;
-            this.tbOutputH.Text = "0";
-            this.tbOutputH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbInputH.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tbInputH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputH.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbInputH.Location = new System.Drawing.Point(209, 32);
+            this.tbInputH.Name = "tbInputH";
+            this.tbInputH.ReadOnly = true;
+            this.tbInputH.Size = new System.Drawing.Size(23, 23);
+            this.tbInputH.TabIndex = 21;
+            this.tbInputH.Text = "0";
+            this.tbInputH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbOutputG
             // 
@@ -271,18 +283,18 @@ namespace DeltaElektronika.PSC_ETH
             this.lbOutputG.TabIndex = 20;
             this.lbOutputG.Text = "G";
             // 
-            // tbOutputG
+            // tbInputG
             // 
-            this.tbOutputG.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tbOutputG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbOutputG.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbOutputG.Location = new System.Drawing.Point(180, 32);
-            this.tbOutputG.Name = "tbOutputG";
-            this.tbOutputG.ReadOnly = true;
-            this.tbOutputG.Size = new System.Drawing.Size(23, 23);
-            this.tbOutputG.TabIndex = 19;
-            this.tbOutputG.Text = "0";
-            this.tbOutputG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbInputG.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tbInputG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputG.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbInputG.Location = new System.Drawing.Point(180, 32);
+            this.tbInputG.Name = "tbInputG";
+            this.tbInputG.ReadOnly = true;
+            this.tbInputG.Size = new System.Drawing.Size(23, 23);
+            this.tbInputG.TabIndex = 19;
+            this.tbInputG.Text = "0";
+            this.tbInputG.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbInputF
             // 
@@ -359,18 +371,18 @@ namespace DeltaElektronika.PSC_ETH
             this.lbOutputC.TabIndex = 12;
             this.lbOutputC.Text = "C";
             // 
-            // tbOutputC
+            // tbInputC
             // 
-            this.tbOutputC.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tbOutputC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbOutputC.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbOutputC.Location = new System.Drawing.Point(64, 32);
-            this.tbOutputC.Name = "tbOutputC";
-            this.tbOutputC.ReadOnly = true;
-            this.tbOutputC.Size = new System.Drawing.Size(23, 23);
-            this.tbOutputC.TabIndex = 11;
-            this.tbOutputC.Text = "0";
-            this.tbOutputC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbInputC.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tbInputC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputC.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbInputC.Location = new System.Drawing.Point(64, 32);
+            this.tbInputC.Name = "tbInputC";
+            this.tbInputC.ReadOnly = true;
+            this.tbInputC.Size = new System.Drawing.Size(23, 23);
+            this.tbInputC.TabIndex = 11;
+            this.tbInputC.Text = "0";
+            this.tbInputC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbOutputB
             // 
@@ -381,18 +393,18 @@ namespace DeltaElektronika.PSC_ETH
             this.lbOutputB.TabIndex = 10;
             this.lbOutputB.Text = "B";
             // 
-            // tbOutputB
+            // tbInputB
             // 
-            this.tbOutputB.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tbOutputB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbOutputB.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbOutputB.Location = new System.Drawing.Point(35, 32);
-            this.tbOutputB.Name = "tbOutputB";
-            this.tbOutputB.ReadOnly = true;
-            this.tbOutputB.Size = new System.Drawing.Size(23, 23);
-            this.tbOutputB.TabIndex = 9;
-            this.tbOutputB.Text = "0";
-            this.tbOutputB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbInputB.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tbInputB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbInputB.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbInputB.Location = new System.Drawing.Point(35, 32);
+            this.tbInputB.Name = "tbInputB";
+            this.tbInputB.ReadOnly = true;
+            this.tbInputB.Size = new System.Drawing.Size(23, 23);
+            this.tbInputB.TabIndex = 9;
+            this.tbInputB.Text = "0";
+            this.tbInputB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbInputA
             // 
@@ -446,7 +458,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btOutputF.Name = "btOutputF";
             this.btOutputF.Size = new System.Drawing.Size(23, 23);
             this.btOutputF.TabIndex = 30;
-            this.btOutputF.Tag = "5";
+            this.btOutputF.Tag = "";
             this.btOutputF.Text = "0";
             this.btOutputF.UseVisualStyleBackColor = false;
             this.btOutputF.Click += new System.EventHandler(this.btOutputX_Click);
@@ -460,7 +472,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btOutputE.Name = "btOutputE";
             this.btOutputE.Size = new System.Drawing.Size(23, 23);
             this.btOutputE.TabIndex = 29;
-            this.btOutputE.Tag = "4";
+            this.btOutputE.Tag = "";
             this.btOutputE.Text = "0";
             this.btOutputE.UseVisualStyleBackColor = false;
             this.btOutputE.Click += new System.EventHandler(this.btOutputX_Click);
@@ -474,7 +486,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btOutputD.Name = "btOutputD";
             this.btOutputD.Size = new System.Drawing.Size(23, 23);
             this.btOutputD.TabIndex = 28;
-            this.btOutputD.Tag = "4";
+            this.btOutputD.Tag = "";
             this.btOutputD.Text = "0";
             this.btOutputD.UseVisualStyleBackColor = false;
             this.btOutputD.Click += new System.EventHandler(this.btOutputX_Click);
@@ -488,7 +500,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btOutputC.Name = "btOutputC";
             this.btOutputC.Size = new System.Drawing.Size(23, 23);
             this.btOutputC.TabIndex = 27;
-            this.btOutputC.Tag = "2";
+            this.btOutputC.Tag = "";
             this.btOutputC.Text = "0";
             this.btOutputC.UseVisualStyleBackColor = false;
             this.btOutputC.Click += new System.EventHandler(this.btOutputX_Click);
@@ -502,7 +514,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btOutputB.Name = "btOutputB";
             this.btOutputB.Size = new System.Drawing.Size(23, 23);
             this.btOutputB.TabIndex = 26;
-            this.btOutputB.Tag = "1";
+            this.btOutputB.Tag = "";
             this.btOutputB.Text = "0";
             this.btOutputB.UseVisualStyleBackColor = false;
             this.btOutputB.Click += new System.EventHandler(this.btOutputX_Click);
@@ -516,7 +528,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btOutputA.Name = "btOutputA";
             this.btOutputA.Size = new System.Drawing.Size(23, 23);
             this.btOutputA.TabIndex = 25;
-            this.btOutputA.Tag = "0";
+            this.btOutputA.Tag = "";
             this.btOutputA.Text = "0";
             this.btOutputA.UseVisualStyleBackColor = false;
             this.btOutputA.Click += new System.EventHandler(this.btOutputX_Click);
@@ -575,45 +587,18 @@ namespace DeltaElektronika.PSC_ETH
             this.label6.TabIndex = 19;
             this.label6.Text = "A";
             // 
-            // btRemoteVoltage
-            // 
-            this.btRemoteVoltage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btRemoteVoltage.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btRemoteVoltage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRemoteVoltage.Location = new System.Drawing.Point(6, 71);
-            this.btRemoteVoltage.Name = "btRemoteVoltage";
-            this.btRemoteVoltage.Size = new System.Drawing.Size(61, 23);
-            this.btRemoteVoltage.TabIndex = 29;
-            this.btRemoteVoltage.Text = "Local";
-            this.btRemoteVoltage.UseVisualStyleBackColor = false;
-            this.btRemoteVoltage.Click += new System.EventHandler(this.btRemoteVoltage_Click);
-            // 
-            // btRemoteCurrent
-            // 
-            this.btRemoteCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btRemoteCurrent.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.btRemoteCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRemoteCurrent.Location = new System.Drawing.Point(6, 71);
-            this.btRemoteCurrent.Name = "btRemoteCurrent";
-            this.btRemoteCurrent.Size = new System.Drawing.Size(61, 23);
-            this.btRemoteCurrent.TabIndex = 30;
-            this.btRemoteCurrent.Text = "Local";
-            this.btRemoteCurrent.UseVisualStyleBackColor = false;
-            this.btRemoteCurrent.Click += new System.EventHandler(this.btRemoteCurrent_Click);
-            // 
             // HomePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbOutputs);
             this.Controls.Add(this.gbInputs);
-            this.Controls.Add(this.btRefresh);
             this.Controls.Add(this.gbCurrent);
             this.Controls.Add(this.gbVoltage);
             this.Controls.Add(this.btOutput);
             this.Controls.Add(this.lbTitle);
             this.Name = "HomePanel";
-            this.Size = new System.Drawing.Size(561, 316);
+            this.Size = new System.Drawing.Size(390, 316);
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).EndInit();
             this.gbVoltage.ResumeLayout(false);
@@ -639,14 +624,13 @@ namespace DeltaElektronika.PSC_ETH
         private System.Windows.Forms.Button btOutput;
         private System.Windows.Forms.GroupBox gbVoltage;
         private System.Windows.Forms.GroupBox gbCurrent;
-        private System.Windows.Forms.Button btRefresh;
         private System.Windows.Forms.GroupBox gbInputs;
         private System.Windows.Forms.TextBox tbInputA;
         private System.Windows.Forms.Label lbInputA;
         private System.Windows.Forms.Label lbOutputH;
-        private System.Windows.Forms.TextBox tbOutputH;
+        private System.Windows.Forms.TextBox tbInputH;
         private System.Windows.Forms.Label lbOutputG;
-        private System.Windows.Forms.TextBox tbOutputG;
+        private System.Windows.Forms.TextBox tbInputG;
         private System.Windows.Forms.Label lbInputF;
         private System.Windows.Forms.TextBox tbInputF;
         private System.Windows.Forms.Label lbInputE;
@@ -654,9 +638,9 @@ namespace DeltaElektronika.PSC_ETH
         private System.Windows.Forms.Label lbInputD;
         private System.Windows.Forms.TextBox tbInputD;
         private System.Windows.Forms.Label lbOutputC;
-        private System.Windows.Forms.TextBox tbOutputC;
+        private System.Windows.Forms.TextBox tbInputC;
         private System.Windows.Forms.Label lbOutputB;
-        private System.Windows.Forms.TextBox tbOutputB;
+        private System.Windows.Forms.TextBox tbInputB;
         private System.Windows.Forms.GroupBox gbOutputs;
         private System.Windows.Forms.Button btOutputF;
         private System.Windows.Forms.Button btOutputE;

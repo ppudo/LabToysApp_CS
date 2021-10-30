@@ -27,11 +27,22 @@ namespace DeltaElektronika.PSC_ETH
 
             //set language version and disable and enable some controls depends on options
             SetLanguage(lang);
+
+            //set some variables
+            digitalInputs = new TextBox[] { tbInputA, tbInputB, tbInputC, tbInputD, tbInputE, tbInputF, tbInputG, tbInputH };
+            digitalOutputs = new Button[] { btOutputA, btOutputB, btOutputC, btOutputD, btOutputE, btOutputF };
+            for( int i=0; i<digitalOutputs.Length; i++ )
+            {
+                digitalOutputs[i].Tag = (int)i;
+            }
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private LabToys.DeltaElektronika.PSC_ETH device = null;
+        private TextBox[] digitalInputs = null;
+        private Button[] digitalOutputs = null;
 
+        #region FUNCTIONS
         //-------------------------------------------------------------------------------------------------------------------------------------------
         /// <summary>
         /// Set text elements in panel based on selected language
@@ -58,6 +69,58 @@ namespace DeltaElektronika.PSC_ETH
         }
 
         //-----------------------------------------------------------------------------------------
+        public void DisplayDeviceStatus()
+        {
+            if (!float.IsNaN(device.DeviceStatus.MeasuredVoltage))
+            {
+                SetTextControl(tbMeasuredVoltage, device.DeviceStatus.MeasuredVoltage.ToString("0.0000") + " V");
+            }
+            if (!float.IsNaN(device.DeviceStatus.MeasuredCurrent))
+            {
+                SetTextControl(tbMeasuredCurrent, device.DeviceStatus.MeasuredCurrent.ToString("0.0000") + " A");
+            }
+
+            //-----------------------------------
+            if (device.DeviceStatus.DigitalOutputs != int.MinValue)
+            {
+                for( int i=0; i<digitalOutputs.Length; i++ )
+                {
+                    if ((device.DeviceStatus.DigitalOutputs & (1 << i)) != 0)
+                    {
+                        SetTextControl(digitalOutputs[i], "1");
+                        SetControlBackColor(digitalOutputs[i], Color.YellowGreen);
+                    }
+                    else
+                    {
+                        SetTextControl(digitalOutputs[i], "0");
+                        SetControlBackColor(digitalOutputs[i], SystemColors.ControlDark);
+                    }
+                }
+            }
+
+            //-----------------------------------
+            if (device.DeviceStatus.DigitalInputs != int.MinValue)
+            {
+                for (int i = 0; i < digitalInputs.Length; i++)
+                {
+                    if ((device.DeviceStatus.DigitalInputs & (1 << i)) != 0)
+                    {
+                        SetTextControl(digitalInputs[i], "1");
+                        SetControlBackColor(digitalInputs[i], Color.YellowGreen);
+                    }
+                    else
+                    {
+                        SetTextControl(digitalInputs[i], "0");
+                        SetControlBackColor(digitalInputs[i], SystemColors.ControlDark);
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+        #region ACTION_ITEMS
+        //-------------------------------------------------------------------------------------------------------------------------------------------
         private void btOutput_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
@@ -119,8 +182,7 @@ namespace DeltaElektronika.PSC_ETH
         {
             //get idx
             Button btn = (Button)sender;
-            int idx = int.Parse((string)btn.Text);
-            int mask = 1 << idx;
+            int mask = 1 << (int)btn.Tag;
 
             Cursor.Current = Cursors.WaitCursor;
 
@@ -139,7 +201,7 @@ namespace DeltaElektronika.PSC_ETH
             }
             else
             {   //clear - set to '0'
-                state = state & mask;
+                state = state & ~mask;
             }
 
             //send new state
@@ -162,23 +224,6 @@ namespace DeltaElektronika.PSC_ETH
             }
 
             Cursor.Current = Cursors.Default;
-        }
-
-        //-----------------------------------------------------------------------------------------
-        private void btRefresh_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-
-            if( btn.BackColor == SystemColors.ControlDark )
-            {
-                btn.BackColor = Color.LightGreen;
-                btn.Text = "Refresh enabled";
-            }
-            else
-            {
-                btn.BackColor = SystemColors.ControlDark;
-                btn.Text = "Refresh disabled";
-            }
         }
 
         //-----------------------------------------------------------------------------------------
@@ -248,5 +293,48 @@ namespace DeltaElektronika.PSC_ETH
 
             Cursor.Current = Cursors.Default;
         }
+        #endregion
+
+        #region DELEGATES
+        //-------------------------------------------------------------------------------------------------------------------------------------------
+        //  DDDD  EEEEE L     EEEEE  GGG    A   TTTTT EEEEE  SSS
+        //  D   D E     L     E     G      A A    T   E     S
+        //  D   D EEE   L     EEE   G  GG A   A   T   EEE    SSS
+        //  D   D E     L     E     G   G AAAAA   T   E         S
+        //  DDDD  EEEEE LLLLL EEEEE  GGG  A   A   T   EEEEE  SSS
+        //
+
+        private delegate void SetTextControlDelegate(Control control, string text);
+
+        private void SetTextControl(Control control, string text)
+        {
+            if (control.InvokeRequired)
+            {
+                SetTextControlDelegate d = new SetTextControlDelegate(SetTextControl);
+                this.Invoke(d, new object[] { control, text });
+            }
+            else
+            {
+                control.Text = text;
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private delegate void SetControlBackColorDelegate( Control control, Color newColor );
+
+        private void SetControlBackColor(Control control, Color color)
+        {
+            if (control.InvokeRequired)
+            {
+                SetControlBackColorDelegate d = new SetControlBackColorDelegate(SetControlBackColor);
+                this.Invoke(d, new object[] { control, color });
+            }
+            else
+            {
+                control.BackColor = color;
+            }
+        }
+
+        #endregion
     }
 }

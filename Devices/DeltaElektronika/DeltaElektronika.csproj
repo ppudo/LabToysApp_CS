@@ -148,13 +148,14 @@
     <Content Include="PSC_ETH\Graphics\power-supply.png" />
     <None Include="PSC_ETH\Graphics\remove.png" />
     <None Include="PSC_ETH\Graphics\save.png" />
+    <None Include="PSC_ETH\Graphics\refresh.png" />
     <Content Include="PSC_ETH\Graphics\sequencer.png" />
     <Content Include="PSC_ETH\Graphics\Sources.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/28" />
+      <UserProperties BuildVersion_StartDate="2021/10/28" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

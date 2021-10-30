@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LabToys.DeltaElektronika;
+using System.Threading;
 
 namespace DeltaElektronika.PSC_ETH
 {
@@ -53,7 +54,9 @@ namespace DeltaElektronika.PSC_ETH
         private bool debug = false;
         private string lang = "";
         private LabToys.DeltaElektronika.PSC_ETH device = null;
+        private Thread refreshThread = null;
 
+        #region FUNCTIONS
         //-------------------------------------------------------------------------------------------------------------------------------------------
         /// <summary>
         /// Set text elements in panel based on selected language
@@ -87,6 +90,41 @@ namespace DeltaElektronika.PSC_ETH
         }
 
         //-----------------------------------------------------------------------------------------
+        private void RefreshFunction()
+        {
+            try
+            {
+                int messagesDelay = 100;
+
+                while (true)
+                {
+                    if (device.RefreshDeviceStatus(false))
+                    {
+                        RefreshPanels();
+                    }
+
+                    Thread.Sleep(messagesDelay);
+                }
+            }
+            catch (ThreadAbortException)
+            {
+                if (device.RefreshDeviceStatus(true))
+                {
+                    RefreshPanels();
+                }
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void RefreshPanels()
+        {
+            ((HomePanel)tsbtHome.Tag).DisplayDeviceStatus();
+            ((SequencerPanel)tsbtSequencer.Tag).DisplayDeviceStatus();
+        }
+        #endregion
+
+        #region ACTION_ITEMS
+        //-------------------------------------------------------------------------------------------------------------------------------------------
         private void tsbChangePanel_Click(object sender, EventArgs e)
         {
             ToolStripButton button = (ToolStripButton)sender;
@@ -98,5 +136,33 @@ namespace DeltaElektronika.PSC_ETH
                 tsPSC_ETH.Tag = button.Tag;
             }
         }
+
+        //-----------------------------------------------------------------------------------------
+        private void tsbtRefresh_Click(object sender, EventArgs e)
+        {
+            ToolStripButton btn = (ToolStripButton)sender;
+
+            if (btn.BackColor == SystemColors.ControlDark)
+            {
+                btn.BackColor = Color.LightGreen;
+
+                if (refreshThread == null)
+                {
+                    refreshThread = new Thread(new ThreadStart(RefreshFunction))
+                    {
+                        IsBackground = true
+                    };
+                }
+                refreshThread.Start();
+            }
+            else
+            {
+                btn.BackColor = SystemColors.ControlDark;
+
+                refreshThread.Abort();
+                refreshThread = null;
+            }
+        }
+        #endregion
     }
 }

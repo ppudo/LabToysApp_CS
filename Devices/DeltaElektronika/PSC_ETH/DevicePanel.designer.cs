@@ -31,11 +31,12 @@
             this.tsContainer = new System.Windows.Forms.ToolStripContainer();
             this.tsPSC_ETH = new System.Windows.Forms.ToolStrip();
             this.tslName = new System.Windows.Forms.ToolStripLabel();
+            this.tstbError = new System.Windows.Forms.ToolStripTextBox();
             this.tsbtHome = new System.Windows.Forms.ToolStripButton();
             this.tsbtSequencer = new System.Windows.Forms.ToolStripButton();
             this.tsbtInfo = new System.Windows.Forms.ToolStripButton();
             this.tsbtDebug = new System.Windows.Forms.ToolStripButton();
-            this.tstbError = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbtRefresh = new System.Windows.Forms.ToolStripButton();
             this.tsContainer.TopToolStripPanel.SuspendLayout();
             this.tsContainer.SuspendLayout();
             this.tsPSC_ETH.SuspendLayout();
@@ -71,10 +72,11 @@
             this.tsbtSequencer,
             this.tsbtInfo,
             this.tsbtDebug,
-            this.tstbError});
+            this.tstbError,
+            this.tsbtRefresh});
             this.tsPSC_ETH.Location = new System.Drawing.Point(3, 0);
             this.tsPSC_ETH.Name = "tsPSC_ETH";
-            this.tsPSC_ETH.Size = new System.Drawing.Size(282, 25);
+            this.tsPSC_ETH.Size = new System.Drawing.Size(305, 25);
             this.tsPSC_ETH.TabIndex = 1;
             // 
             // tslName
@@ -82,6 +84,12 @@
             this.tslName.Name = "tslName";
             this.tslName.Size = new System.Drawing.Size(54, 22);
             this.tslName.Text = "PSC_ETH";
+            // 
+            // tstbError
+            // 
+            this.tstbError.Name = "tstbError";
+            this.tstbError.ReadOnly = true;
+            this.tstbError.Size = new System.Drawing.Size(100, 25);
             // 
             // tsbtHome
             // 
@@ -119,11 +127,15 @@
             this.tsbtDebug.Size = new System.Drawing.Size(23, 22);
             this.tsbtDebug.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
-            // tstbError
+            // tsbtRefresh
             // 
-            this.tstbError.Name = "tstbError";
-            this.tstbError.ReadOnly = true;
-            this.tstbError.Size = new System.Drawing.Size(100, 25);
+            this.tsbtRefresh.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tsbtRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtRefresh.Image = global::DeltaElektronika.Properties.Resources.refresh;
+            this.tsbtRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtRefresh.Name = "tsbtRefresh";
+            this.tsbtRefresh.Size = new System.Drawing.Size(23, 22);
+            this.tsbtRefresh.Click += new System.EventHandler(this.tsbtRefresh_Click);
             // 
             // DevicePanel
             // 
@@ -152,5 +164,6 @@
         private System.Windows.Forms.ToolStripButton tsbtDebug;
         private System.Windows.Forms.ToolStripTextBox tstbError;
         private System.Windows.Forms.ToolStripButton tsbtSequencer;
+        private System.Windows.Forms.ToolStripButton tsbtRefresh;
     }
 }

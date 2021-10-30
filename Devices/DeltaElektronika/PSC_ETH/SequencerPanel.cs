@@ -32,6 +32,7 @@ namespace DeltaElektronika.PSC_ETH
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private LabToys.DeltaElektronika.PSC_ETH device = null;
 
+        #region FUNCTIONS
         //-------------------------------------------------------------------------------------------------------------------------------------------
         /// <summary>
         /// Set text elements in panel based on selected language
@@ -57,6 +58,40 @@ namespace DeltaElektronika.PSC_ETH
             SetLanguage(lang);
         }
 
+        //-----------------------------------------------------------------------------------------
+        public void DisplayDeviceStatus()
+        {
+            if (device.DeviceStatus.SelectedSequence.Length > 0)
+            {
+                if (tbSequenceName.Text != device.DeviceStatus.SelectedSequence)
+                {
+                    SetTextControl(tbSequenceName, device.DeviceStatus.SelectedSequence);
+                }
+
+                if( device.DeviceStatus.SequenceStatus.State != LabToys.DeltaElektronika.PSC_ETH.SequenceState.ERROR )
+                {
+                    switch(device.DeviceStatus.SequenceStatus.State)
+                    {
+                        case LabToys.DeltaElektronika.PSC_ETH.SequenceState.STOP:
+                            SetTextControl(tbSequenceStatus, "STOP" );
+                            break;
+                        case LabToys.DeltaElektronika.PSC_ETH.SequenceState.RUN:
+                            SetTextControl(tbSequenceStatus, "RUN, " + device.DeviceStatus.SequenceStatus.Idx.ToString() );
+                            break;
+                        case LabToys.DeltaElektronika.PSC_ETH.SequenceState.PAUSE:
+                            SetTextControl(tbSequenceStatus, "PAUSE, " + device.DeviceStatus.SequenceStatus.Idx.ToString());
+                            break;
+                        default:
+                            SetTextControl(tbSequenceStatus, "" );
+                            break;
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+        #region ACTION_ITEMS
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private void btRefreshCatalog_Click(object sender, EventArgs e)
         {
@@ -97,7 +132,6 @@ namespace DeltaElektronika.PSC_ETH
                     return;
                 }
 
-                //dgvSequence.Tag = null;
                 tbSequenceName.Text = selectedSequence;
                 return;
             }
@@ -137,6 +171,7 @@ namespace DeltaElektronika.PSC_ETH
             {
                 gbSequenceControl.Enabled = true;
 
+                tbSequenceStatus.Text = "";
                 dgvSequence.Rows.Clear();
                 string[] sequence = device.GetCompleteSequence();
 
@@ -285,5 +320,31 @@ namespace DeltaElektronika.PSC_ETH
                 tbSequenceName.Text = name;
             }
         }
+        #endregion
+
+        #region DELEGATES
+        //-------------------------------------------------------------------------------------------------------------------------------------------
+        //  DDDD  EEEEE L     EEEEE  GGG    A   TTTTT EEEEE  SSS
+        //  D   D E     L     E     G      A A    T   E     S
+        //  D   D EEE   L     EEE   G  GG A   A   T   EEE    SSS
+        //  D   D E     L     E     G   G AAAAA   T   E         S
+        //  DDDD  EEEEE LLLLL EEEEE  GGG  A   A   T   EEEEE  SSS
+        //
+
+        private delegate void SetTextControlDelegate(Control control, string text);
+
+        private void SetTextControl(Control control, string text)
+        {
+            if (control.InvokeRequired)
+            {
+                SetTextControlDelegate d = new SetTextControlDelegate(SetTextControl);
+                this.Invoke(d, new object[] { control, text });
+            }
+            else
+            {
+                control.Text = text;
+            }
+        }
+        #endregion
     }
 }

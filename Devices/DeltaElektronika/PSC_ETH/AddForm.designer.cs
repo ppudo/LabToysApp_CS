@@ -137,6 +137,7 @@ namespace DeltaElektronika.PSC_ETH
             this.tbIPaddress.Name = "tbIPaddress";
             this.tbIPaddress.Size = new System.Drawing.Size(116, 20);
             this.tbIPaddress.TabIndex = 1;
+            this.tbIPaddress.Text = "10.1.0.101";
             this.tbIPaddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbIPaddress
