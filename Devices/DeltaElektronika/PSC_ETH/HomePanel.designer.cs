@@ -68,6 +68,8 @@ namespace DeltaElektronika.PSC_ETH
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btRemoteVoltage = new System.Windows.Forms.Button();
+            this.btRemoteCurrent = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).BeginInit();
             this.gbVoltage.SuspendLayout();
@@ -178,6 +180,7 @@ namespace DeltaElektronika.PSC_ETH
             // 
             // gbVoltage
             // 
+            this.gbVoltage.Controls.Add(this.btRemoteVoltage);
             this.gbVoltage.Controls.Add(this.nudVoltage);
             this.gbVoltage.Controls.Add(this.tbMeasuredVoltage);
             this.gbVoltage.Location = new System.Drawing.Point(3, 36);
@@ -189,6 +192,7 @@ namespace DeltaElektronika.PSC_ETH
             // 
             // gbCurrent
             // 
+            this.gbCurrent.Controls.Add(this.btRemoteCurrent);
             this.gbCurrent.Controls.Add(this.nudCurrent);
             this.gbCurrent.Controls.Add(this.tbMeasuredCurrent);
             this.gbCurrent.Location = new System.Drawing.Point(189, 36);
@@ -203,7 +207,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btRefresh.BackColor = System.Drawing.SystemColors.ControlDark;
             this.btRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btRefresh.Location = new System.Drawing.Point(283, 3);
+            this.btRefresh.Location = new System.Drawing.Point(451, 3);
             this.btRefresh.Name = "btRefresh";
             this.btRefresh.Size = new System.Drawing.Size(107, 23);
             this.btRefresh.TabIndex = 26;
@@ -229,9 +233,9 @@ namespace DeltaElektronika.PSC_ETH
             this.gbInputs.Controls.Add(this.tbOutputB);
             this.gbInputs.Controls.Add(this.lbInputA);
             this.gbInputs.Controls.Add(this.tbInputA);
-            this.gbInputs.Location = new System.Drawing.Point(9, 171);
+            this.gbInputs.Location = new System.Drawing.Point(3, 171);
             this.gbInputs.Name = "gbInputs";
-            this.gbInputs.Size = new System.Drawing.Size(243, 68);
+            this.gbInputs.Size = new System.Drawing.Size(244, 68);
             this.gbInputs.TabIndex = 27;
             this.gbInputs.TabStop = false;
             this.gbInputs.Text = "Inputs";
@@ -426,9 +430,9 @@ namespace DeltaElektronika.PSC_ETH
             this.gbOutputs.Controls.Add(this.label4);
             this.gbOutputs.Controls.Add(this.label5);
             this.gbOutputs.Controls.Add(this.label6);
-            this.gbOutputs.Location = new System.Drawing.Point(9, 245);
+            this.gbOutputs.Location = new System.Drawing.Point(3, 245);
             this.gbOutputs.Name = "gbOutputs";
-            this.gbOutputs.Size = new System.Drawing.Size(183, 65);
+            this.gbOutputs.Size = new System.Drawing.Size(184, 65);
             this.gbOutputs.TabIndex = 28;
             this.gbOutputs.TabStop = false;
             this.gbOutputs.Text = "Outputs";
@@ -571,6 +575,32 @@ namespace DeltaElektronika.PSC_ETH
             this.label6.TabIndex = 19;
             this.label6.Text = "A";
             // 
+            // btRemoteVoltage
+            // 
+            this.btRemoteVoltage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btRemoteVoltage.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btRemoteVoltage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRemoteVoltage.Location = new System.Drawing.Point(6, 71);
+            this.btRemoteVoltage.Name = "btRemoteVoltage";
+            this.btRemoteVoltage.Size = new System.Drawing.Size(61, 23);
+            this.btRemoteVoltage.TabIndex = 29;
+            this.btRemoteVoltage.Text = "Local";
+            this.btRemoteVoltage.UseVisualStyleBackColor = false;
+            this.btRemoteVoltage.Click += new System.EventHandler(this.btRemoteVoltage_Click);
+            // 
+            // btRemoteCurrent
+            // 
+            this.btRemoteCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btRemoteCurrent.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.btRemoteCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btRemoteCurrent.Location = new System.Drawing.Point(6, 71);
+            this.btRemoteCurrent.Name = "btRemoteCurrent";
+            this.btRemoteCurrent.Size = new System.Drawing.Size(61, 23);
+            this.btRemoteCurrent.TabIndex = 30;
+            this.btRemoteCurrent.Text = "Local";
+            this.btRemoteCurrent.UseVisualStyleBackColor = false;
+            this.btRemoteCurrent.Click += new System.EventHandler(this.btRemoteCurrent_Click);
+            // 
             // HomePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,7 +613,7 @@ namespace DeltaElektronika.PSC_ETH
             this.Controls.Add(this.btOutput);
             this.Controls.Add(this.lbTitle);
             this.Name = "HomePanel";
-            this.Size = new System.Drawing.Size(393, 322);
+            this.Size = new System.Drawing.Size(561, 316);
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).EndInit();
             this.gbVoltage.ResumeLayout(false);
@@ -640,5 +670,7 @@ namespace DeltaElektronika.PSC_ETH
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btRemoteVoltage;
+        private System.Windows.Forms.Button btRemoteCurrent;
     }
 }

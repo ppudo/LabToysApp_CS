@@ -178,7 +178,6 @@ namespace DeltaElektronika.PSC_ETH
             // 
             // lbVersion
             // 
-            this.lbVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbVersion.AutoSize = true;
             this.lbVersion.Location = new System.Drawing.Point(133, 69);
             this.lbVersion.Name = "lbVersion";

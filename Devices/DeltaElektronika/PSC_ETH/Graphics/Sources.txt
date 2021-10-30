@@ -1,6 +1,8 @@
 ﻿Freepik
 		bug.png					- https://www.flaticon.com/free-icon/bug_784558						- https://www.flaticon.com/authors/freepik			- Freepik
+		continue.png			- https://www.flaticon.com/free-icon/next_3039456					- https://www.flaticon.com/authors/freepik			- Freepik
 		folder.png				- https://www.flaticon.com/free-icon/folder_1375102					- https://www.flaticon.com/authors/freepik			- Freepik
+		next.png				- https://www.flaticon.com/free-icon/forward_3039391				- https://www.flaticon.com/authors/freepik			- Freepik
 		pause.png				- https://www.flaticon.com/free-icon/pause_3039518					- https://www.flaticon.com/authors/freepik			- Freepik
 		play.png				- https://www.flaticon.com/free-icon/play_3039386					- https://www.flaticon.com/authors/freepik			- Freepik
 		power-supply.png		- https://www.flaticon.com/free-icon/power-supply_1699453			- https://www.flaticon.com/authors/freepik			- Freepik
@@ -15,3 +17,4 @@ Pixel perfect
 		info.png				- https://www.flaticon.com/free-icon/info_1828558					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		plus.png				- https://www.flaticon.com/free-icon/plus_1828574					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		remove.png				- https://www.flaticon.com/free-icon/remove_1828595					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
+		trigger.png				- https://www.flaticon.com/free-icon/finger_1828237					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect

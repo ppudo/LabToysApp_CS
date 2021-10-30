@@ -193,6 +193,39 @@ namespace DeltaElektronika.PSC_ETH
         }
 
         //-----------------------------------------------------------------------------------------
+        private void btNextStep_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            if (!device.NextStep())
+            {
+
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btContinue_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            if (!device.ContinueSequence())
+            {
+
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btTrigger_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            if (!device.TriggerStep())
+            {
+
+            }
+            Cursor.Current = Cursors.Default;
+        }
+
+        //-----------------------------------------------------------------------------------------
         private void btSave_Click(object sender, EventArgs e)
         {
             SaveFileDialog dialog = new SaveFileDialog();

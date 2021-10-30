@@ -74,7 +74,7 @@
             this.tstbError});
             this.tsPSC_ETH.Location = new System.Drawing.Point(3, 0);
             this.tsPSC_ETH.Name = "tsPSC_ETH";
-            this.tsPSC_ETH.Size = new System.Drawing.Size(251, 25);
+            this.tsPSC_ETH.Size = new System.Drawing.Size(282, 25);
             this.tsPSC_ETH.TabIndex = 1;
             // 
             // tslName

@@ -134,14 +134,17 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="PSC_ETH\Graphics\bug.png" />
+    <None Include="PSC_ETH\Graphics\trigger.png" />
     <None Include="PSC_ETH\Graphics\edit.png" />
     <None Include="PSC_ETH\Graphics\folder.png" />
+    <None Include="PSC_ETH\Graphics\continue.png" />
     <Content Include="PSC_ETH\Graphics\home.png" />
     <Content Include="PSC_ETH\Graphics\info.png" />
     <None Include="PSC_ETH\Graphics\stop.png" />
     <None Include="PSC_ETH\Graphics\plus.png" />
     <None Include="PSC_ETH\Graphics\pause.png" />
     <None Include="PSC_ETH\Graphics\play.png" />
+    <None Include="PSC_ETH\Graphics\next.png" />
     <Content Include="PSC_ETH\Graphics\power-supply.png" />
     <None Include="PSC_ETH\Graphics\remove.png" />
     <None Include="PSC_ETH\Graphics\save.png" />
@@ -151,7 +154,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_StartDate="2021/10/28" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/28" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
