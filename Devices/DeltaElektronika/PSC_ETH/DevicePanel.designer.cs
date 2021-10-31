@@ -35,6 +35,7 @@
             this.tsbtHome = new System.Windows.Forms.ToolStripButton();
             this.tsbtSequencer = new System.Windows.Forms.ToolStripButton();
             this.tsbtInfo = new System.Windows.Forms.ToolStripButton();
+            this.tsbtCommon = new System.Windows.Forms.ToolStripButton();
             this.tsbtDebug = new System.Windows.Forms.ToolStripButton();
             this.tsbtRefresh = new System.Windows.Forms.ToolStripButton();
             this.tsContainer.TopToolStripPanel.SuspendLayout();
@@ -70,13 +71,14 @@
             this.tslName,
             this.tsbtHome,
             this.tsbtSequencer,
+            this.tsbtCommon,
             this.tsbtInfo,
             this.tsbtDebug,
             this.tstbError,
             this.tsbtRefresh});
             this.tsPSC_ETH.Location = new System.Drawing.Point(3, 0);
             this.tsPSC_ETH.Name = "tsPSC_ETH";
-            this.tsPSC_ETH.Size = new System.Drawing.Size(305, 25);
+            this.tsPSC_ETH.Size = new System.Drawing.Size(328, 25);
             this.tsPSC_ETH.TabIndex = 1;
             // 
             // tslName
@@ -117,6 +119,15 @@
             this.tsbtInfo.Name = "tsbtInfo";
             this.tsbtInfo.Size = new System.Drawing.Size(23, 22);
             this.tsbtInfo.Click += new System.EventHandler(this.tsbChangePanel_Click);
+            // 
+            // tsbtCommon
+            // 
+            this.tsbtCommon.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtCommon.Image = global::DeltaElektronika.Properties.Resources.standard;
+            this.tsbtCommon.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtCommon.Name = "tsbtCommon";
+            this.tsbtCommon.Size = new System.Drawing.Size(23, 22);
+            this.tsbtCommon.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
             // tsbtDebug
             // 
@@ -165,5 +176,6 @@
         private System.Windows.Forms.ToolStripTextBox tstbError;
         private System.Windows.Forms.ToolStripButton tsbtSequencer;
         private System.Windows.Forms.ToolStripButton tsbtRefresh;
+        private System.Windows.Forms.ToolStripButton tsbtCommon;
     }
 }

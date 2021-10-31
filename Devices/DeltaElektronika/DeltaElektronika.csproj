@@ -50,6 +50,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddForm.resx</DependentUpon>
     </Compile>
+    <Compile Include="Lang\PSC_ETH\CommonPanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonPanel.resx</DependentUpon>
+    </Compile>
     <Compile Include="Lang\PSC_ETH\DevicePanel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -66,6 +71,12 @@
     </Compile>
     <Compile Include="PSC_ETH\AddForm.designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PSC_ETH\CommonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PSC_ETH\CommonPanel.Designer.cs">
+      <DependentUpon>CommonPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="PSC_ETH\DebugPanel.cs">
       <SubType>UserControl</SubType>
@@ -104,6 +115,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AddForm.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Lang\PSC_ETH\CommonPanel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonPanel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lang\PSC_ETH\DevicePanel.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DevicePanel.Designer.cs</LastGenOutput>
@@ -114,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PSC_ETH\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PSC_ETH\CommonPanel.resx">
+      <DependentUpon>CommonPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PSC_ETH\DebugPanel.resx">
       <DependentUpon>DebugPanel.cs</DependentUpon>
@@ -134,6 +152,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="PSC_ETH\Graphics\bug.png" />
+    <None Include="PSC_ETH\Graphics\standard.png" />
     <None Include="PSC_ETH\Graphics\trigger.png" />
     <None Include="PSC_ETH\Graphics\edit.png" />
     <None Include="PSC_ETH\Graphics\folder.png" />
@@ -155,7 +174,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_StartDate="2021/10/28" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/28" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
