@@ -23,14 +23,16 @@ namespace DeltaElektronika.PSC_ETH
             this.Dock = DockStyle.Fill;
 
             //save variables
+            LANGUAGE = lang;
             this.device = device;
 
             //set language version and disable and enable some controls depends on options
-            SetLanguage(lang);
+            SetLanguage(LANGUAGE);
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private LabToys.DeltaElektronika.PSC_ETH device = null;
+        private string LANGUAGE = "";
 
         #region FUNCTIONS
         //-------------------------------------------------------------------------------------------------------------------------------------------
@@ -55,6 +57,7 @@ namespace DeltaElektronika.PSC_ETH
         //-----------------------------------------------------------------------------------------
         public void ChangeLanguage(string lang)
         {
+            LANGUAGE = lang;
             SetLanguage(lang);
         }
 
@@ -318,6 +321,27 @@ namespace DeltaElektronika.PSC_ETH
                 }
 
                 tbSequenceName.Text = name;
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btAddSequence_Click(object sender, EventArgs e)
+        {
+            EditSequenceForm form = new EditSequenceForm(LANGUAGE);
+            if (form.ShowDialog() == DialogResult.OK )
+            {
+                dgvSequence.Tag = form.SequenceSteps;
+                tbSequenceName.Text = form.SequenceName;
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void btEdit_Click(object sender, EventArgs e)
+        {
+            EditSequenceForm form = new EditSequenceForm(LANGUAGE, tbSequenceName.Text, (string[])dgvSequence.Tag);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
         #endregion

@@ -73,8 +73,9 @@ namespace DeltaElektronika.PSC_ETH
             // 
             // lbCatalog
             // 
-            this.lbCatalog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbCatalog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCatalog.FormattingEnabled = true;
             this.lbCatalog.Location = new System.Drawing.Point(3, 32);
             this.lbCatalog.Name = "lbCatalog";
@@ -184,6 +185,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btEdit.Size = new System.Drawing.Size(23, 23);
             this.btEdit.TabIndex = 28;
             this.btEdit.UseVisualStyleBackColor = true;
+            this.btEdit.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // btStop
             // 
@@ -366,6 +368,7 @@ namespace DeltaElektronika.PSC_ETH
             this.btAddSequence.Size = new System.Drawing.Size(30, 30);
             this.btAddSequence.TabIndex = 21;
             this.btAddSequence.UseVisualStyleBackColor = true;
+            this.btAddSequence.Click += new System.EventHandler(this.btAddSequence_Click);
             // 
             // SequencerPanel
             // 

@@ -1,4 +1,9 @@
-﻿Freepik
+﻿Dave Gandy
+		minus-red.png			- https://www.flaticon.com/free-icon/minus-symbol_25232				- https://www.flaticon.com/authors/dave-gandy		- Dave Gandy
+		plus-green.png			- https://www.flaticon.com/free-icon/plus-black-symbol_25304		- https://www.flaticon.com/authors/dave-gandy		- Dave Gandy
+
+-------------------------------------------------
+Freepik
 		bug.png					- https://www.flaticon.com/free-icon/bug_784558						- https://www.flaticon.com/authors/freepik			- Freepik
 		continue.png			- https://www.flaticon.com/free-icon/next_3039456					- https://www.flaticon.com/authors/freepik			- Freepik
 		folder.png				- https://www.flaticon.com/free-icon/folder_1375102					- https://www.flaticon.com/authors/freepik			- Freepik
