@@ -95,17 +95,12 @@ namespace LabToysApp
         private void cbManufacturer_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox box = (ComboBox)sender;
-            //Dictionary<int, Model[]> dictonary = (Dictionary<int, Model[]>)cbManufacturer.Tag;
-            //Model[] models = dictonary[cbManufacturer.SelectedIndex];
 
-            //Dictionary<int, Type> modelDictionary = new Dictionary<int, Type>();
-
+            cbModel.Items.Clear();
             for (int i = 0; i < manufacturers[box.SelectedIndex].Models.Length; i++)
             {
                 int idx = cbModel.Items.Add(manufacturers[box.SelectedIndex].Models[i].Name);
-                //modelDictionary.Add(idx, models[i].Form);
             }
-            //cbModel.Tag = modelDictionary;
             cbModel.Enabled = true;
         }
 
@@ -118,14 +113,10 @@ namespace LabToysApp
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private void LoadManufacturers()
         {
-            //Dictionary<int, Model[]> dictonary = new Dictionary<int, Model[]>();
-
             for (int i = 0; i < manufacturers.Length; i++)
             {
                 int idx = cbManufacturer.Items.Add(manufacturers[i].Name);
-            //    dictonary.Add(idx, manufacturers[i].Models);
             }
-            //cbManufacturer.Tag = dictonary;
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------
