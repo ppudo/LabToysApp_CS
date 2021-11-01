@@ -79,6 +79,17 @@ namespace DeltaElektronika.PSC_ETH
             {
                 SetTextControl(tbMeasuredCurrent, device.DeviceStatus.MeasuredCurrent.ToString("0.0000") + " A");
             }
+            if( !float.IsNaN(device.DeviceStatus.OutputPower) )
+            {
+                if( device.DeviceStatus.OutputPower > 10.0 )
+                {
+                    SetTextControl(tbMeasuredCurrent, device.DeviceStatus.MeasuredCurrent.ToString("0.00") + " W");
+                }
+                else
+                {
+                    SetTextControl(tbMeasuredCurrent, (device.DeviceStatus.MeasuredCurrent*1000.0).ToString("0") + " mW");
+                }
+            }
 
             //-----------------------------------
             if (device.DeviceStatus.DigitalOutputs != int.MinValue)

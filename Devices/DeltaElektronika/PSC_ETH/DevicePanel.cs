@@ -30,8 +30,9 @@ namespace DeltaElektronika.PSC_ETH
             //loads panels to tags of buttons
             this.tsbtHome.Tag = new HomePanel(this.device, lang);                                   //each button keep in tag refrece to own panel
             this.tsbtSequencer.Tag = new SequencerPanel(this.device, lang);
-            this.tsbtInfo.Tag = new InfoPanel(lang);
             this.tsbtCommon.Tag = new CommonPanel(this.device, lang);
+            this.tsbtInfo.Tag = new InfoPanel(lang);
+            this.tsbtHelp.Tag = new HelpPanel(lang);
             if( this.debug )
             {
                 this.tsbtDebug.Tag = new DebugPanel(this.device, lang);

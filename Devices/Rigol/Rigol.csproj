@@ -51,6 +51,12 @@
     <Compile Include="DS1000Z\AddForm.designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DS1000Z\CommonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DS1000Z\CommonPanel.Designer.cs">
+      <DependentUpon>CommonPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="DS1000Z\DebugPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AddForm.resx</DependentUpon>
     </Compile>
+    <Compile Include="Lang\DS1000Z\CommonPanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonPanel.resx</DependentUpon>
+    </Compile>
     <Compile Include="Lang\DS1000Z\DevicePanel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -103,6 +114,9 @@
     <EmbeddedResource Include="DS1000Z\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DS1000Z\CommonPanel.resx">
+      <DependentUpon>CommonPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DS1000Z\DebugPanel.resx">
       <DependentUpon>DebugPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +132,10 @@
     <EmbeddedResource Include="Lang\DS1000Z\AddForm.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AddForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\DS1000Z\CommonPanel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonPanel.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Lang\DS1000Z\DevicePanel.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -139,11 +157,12 @@
     <Content Include="DS1000Z\Graphics\oscilloscope.ico" />
     <Content Include="DS1000Z\Graphics\oscilloscope.png" />
     <Content Include="DS1000Z\Graphics\Sources.txt" />
+    <None Include="DS1000Z\Graphics\standard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_StartDate="2021/10/26" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/26" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

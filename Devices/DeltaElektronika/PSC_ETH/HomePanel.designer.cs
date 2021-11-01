@@ -69,12 +69,15 @@ namespace DeltaElektronika.PSC_ETH
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.tbPower = new System.Windows.Forms.TextBox();
+            this.gbPower = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).BeginInit();
             this.gbVoltage.SuspendLayout();
             this.gbCurrent.SuspendLayout();
             this.gbInputs.SuspendLayout();
             this.gbOutputs.SuspendLayout();
+            this.gbPower.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbTitle
@@ -245,7 +248,7 @@ namespace DeltaElektronika.PSC_ETH
             this.gbInputs.Controls.Add(this.tbInputB);
             this.gbInputs.Controls.Add(this.lbInputA);
             this.gbInputs.Controls.Add(this.tbInputA);
-            this.gbInputs.Location = new System.Drawing.Point(3, 171);
+            this.gbInputs.Location = new System.Drawing.Point(3, 202);
             this.gbInputs.Name = "gbInputs";
             this.gbInputs.Size = new System.Drawing.Size(244, 68);
             this.gbInputs.TabIndex = 27;
@@ -442,7 +445,7 @@ namespace DeltaElektronika.PSC_ETH
             this.gbOutputs.Controls.Add(this.label4);
             this.gbOutputs.Controls.Add(this.label5);
             this.gbOutputs.Controls.Add(this.label6);
-            this.gbOutputs.Location = new System.Drawing.Point(3, 245);
+            this.gbOutputs.Location = new System.Drawing.Point(3, 276);
             this.gbOutputs.Name = "gbOutputs";
             this.gbOutputs.Size = new System.Drawing.Size(184, 65);
             this.gbOutputs.TabIndex = 28;
@@ -587,10 +590,33 @@ namespace DeltaElektronika.PSC_ETH
             this.label6.TabIndex = 19;
             this.label6.Text = "A";
             // 
+            // tbPower
+            // 
+            this.tbPower.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbPower.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbPower.Location = new System.Drawing.Point(29, 19);
+            this.tbPower.Name = "tbPower";
+            this.tbPower.ReadOnly = true;
+            this.tbPower.Size = new System.Drawing.Size(101, 26);
+            this.tbPower.TabIndex = 29;
+            this.tbPower.Text = "XX.XXXX W";
+            this.tbPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // gbPower
+            // 
+            this.gbPower.Controls.Add(this.tbPower);
+            this.gbPower.Location = new System.Drawing.Point(3, 142);
+            this.gbPower.Name = "gbPower";
+            this.gbPower.Size = new System.Drawing.Size(136, 54);
+            this.gbPower.TabIndex = 30;
+            this.gbPower.TabStop = false;
+            this.gbPower.Text = "Power";
+            // 
             // HomePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gbPower);
             this.Controls.Add(this.gbOutputs);
             this.Controls.Add(this.gbInputs);
             this.Controls.Add(this.gbCurrent);
@@ -598,7 +624,7 @@ namespace DeltaElektronika.PSC_ETH
             this.Controls.Add(this.btOutput);
             this.Controls.Add(this.lbTitle);
             this.Name = "HomePanel";
-            this.Size = new System.Drawing.Size(390, 316);
+            this.Size = new System.Drawing.Size(406, 356);
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).EndInit();
             this.gbVoltage.ResumeLayout(false);
@@ -609,6 +635,8 @@ namespace DeltaElektronika.PSC_ETH
             this.gbInputs.PerformLayout();
             this.gbOutputs.ResumeLayout(false);
             this.gbOutputs.PerformLayout();
+            this.gbPower.ResumeLayout(false);
+            this.gbPower.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -656,5 +684,7 @@ namespace DeltaElektronika.PSC_ETH
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btRemoteVoltage;
         private System.Windows.Forms.Button btRemoteCurrent;
+        private System.Windows.Forms.TextBox tbPower;
+        private System.Windows.Forms.GroupBox gbPower;
     }
 }

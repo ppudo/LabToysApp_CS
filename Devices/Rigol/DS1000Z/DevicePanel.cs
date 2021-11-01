@@ -28,6 +28,7 @@ namespace Rigol.DS1000Z
 
             //loads panels to tags of buttons
             this.tsbtHome.Tag = new HomePanel(this.device, lang);                                   //each button keep in tag refrece to own panel
+            this.tsbtCommon.Tag = new CommonPanel(this.device, lang);
             this.tsbtInfo.Tag = new InfoPanel(lang);
             if( this.debug )
             {

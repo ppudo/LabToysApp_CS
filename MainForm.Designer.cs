@@ -63,7 +63,7 @@ namespace LabToysApp
             this.tsmiGitHub});
             this.msMain.Location = new System.Drawing.Point(0, 0);
             this.msMain.Name = "msMain";
-            this.msMain.Size = new System.Drawing.Size(868, 24);
+            this.msMain.Size = new System.Drawing.Size(783, 24);
             this.msMain.TabIndex = 0;
             this.msMain.Text = "menuStrip1";
             // 
@@ -169,7 +169,7 @@ namespace LabToysApp
             this.scMain.Panel1.Controls.Add(this.btDeleteDevice);
             this.scMain.Panel1.Controls.Add(this.btAddDevice);
             this.scMain.Panel1.Controls.Add(this.tvDevices);
-            this.scMain.Size = new System.Drawing.Size(868, 488);
+            this.scMain.Size = new System.Drawing.Size(783, 394);
             this.scMain.SplitterDistance = 225;
             this.scMain.TabIndex = 1;
             // 
@@ -226,7 +226,7 @@ namespace LabToysApp
             this.tvDevices.Location = new System.Drawing.Point(3, 34);
             this.tvDevices.Name = "tvDevices";
             this.tvDevices.SelectedImageIndex = 0;
-            this.tvDevices.Size = new System.Drawing.Size(219, 451);
+            this.tvDevices.Size = new System.Drawing.Size(219, 357);
             this.tvDevices.TabIndex = 0;
             this.tvDevices.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tvDevices_AfterSelect);
             // 
@@ -243,7 +243,7 @@ namespace LabToysApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 512);
+            this.ClientSize = new System.Drawing.Size(783, 418);
             this.Controls.Add(this.scMain);
             this.Controls.Add(this.msMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

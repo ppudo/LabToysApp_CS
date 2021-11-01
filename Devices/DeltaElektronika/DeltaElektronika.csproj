@@ -61,6 +61,11 @@
       <DependentUpon>DevicePanel.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PSC_ETH\Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -96,6 +101,12 @@
     <Compile Include="PSC_ETH\EditSequenceForm.Designer.cs">
       <DependentUpon>EditSequenceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PSC_ETH\HelpPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PSC_ETH\HelpPanel.Designer.cs">
+      <DependentUpon>HelpPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="PSC_ETH\HomePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +140,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DevicePanel.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="PSC_ETH\Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -148,6 +163,9 @@
     <EmbeddedResource Include="PSC_ETH\EditSequenceForm.resx">
       <DependentUpon>EditSequenceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PSC_ETH\HelpPanel.resx">
+      <DependentUpon>HelpPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PSC_ETH\HomePanel.resx">
       <DependentUpon>HomePanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +179,10 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="PSC_ETH\Graphics\bug.png" />
+    <None Include="PSC_ETH\Images\PSC_ETH-2_IO_pinout.png" />
+    <None Include="PSC_ETH\Images\Delta_SM800_analog_prog.png" />
+    <None Include="PSC_ETH\Images\Delta_SM800_switches.png" />
+    <None Include="PSC_ETH\Images\Delta_SM800_outputs.png" />
     <None Include="PSC_ETH\Graphics\standard.png" />
     <None Include="PSC_ETH\Graphics\trigger.png" />
     <None Include="PSC_ETH\Graphics\edit.png" />
@@ -179,13 +201,14 @@
     <None Include="PSC_ETH\Graphics\remove.png" />
     <None Include="PSC_ETH\Graphics\save.png" />
     <None Include="PSC_ETH\Graphics\refresh.png" />
+    <None Include="PSC_ETH\Graphics\question.png" />
     <Content Include="PSC_ETH\Graphics\sequencer.png" />
     <Content Include="PSC_ETH\Graphics\Sources.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/28" />
+      <UserProperties BuildVersion_StartDate="2021/10/28" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

@@ -34,10 +34,11 @@
             this.tstbError = new System.Windows.Forms.ToolStripTextBox();
             this.tsbtHome = new System.Windows.Forms.ToolStripButton();
             this.tsbtSequencer = new System.Windows.Forms.ToolStripButton();
-            this.tsbtInfo = new System.Windows.Forms.ToolStripButton();
             this.tsbtCommon = new System.Windows.Forms.ToolStripButton();
+            this.tsbtInfo = new System.Windows.Forms.ToolStripButton();
             this.tsbtDebug = new System.Windows.Forms.ToolStripButton();
             this.tsbtRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tsbtHelp = new System.Windows.Forms.ToolStripButton();
             this.tsContainer.TopToolStripPanel.SuspendLayout();
             this.tsContainer.SuspendLayout();
             this.tsPSC_ETH.SuspendLayout();
@@ -73,12 +74,13 @@
             this.tsbtSequencer,
             this.tsbtCommon,
             this.tsbtInfo,
+            this.tsbtHelp,
             this.tsbtDebug,
             this.tstbError,
             this.tsbtRefresh});
             this.tsPSC_ETH.Location = new System.Drawing.Point(3, 0);
             this.tsPSC_ETH.Name = "tsPSC_ETH";
-            this.tsPSC_ETH.Size = new System.Drawing.Size(328, 25);
+            this.tsPSC_ETH.Size = new System.Drawing.Size(351, 25);
             this.tsPSC_ETH.TabIndex = 1;
             // 
             // tslName
@@ -89,6 +91,7 @@
             // 
             // tstbError
             // 
+            this.tstbError.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.tstbError.Name = "tstbError";
             this.tstbError.ReadOnly = true;
             this.tstbError.Size = new System.Drawing.Size(100, 25);
@@ -111,15 +114,6 @@
             this.tsbtSequencer.Size = new System.Drawing.Size(23, 22);
             this.tsbtSequencer.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
-            // tsbtInfo
-            // 
-            this.tsbtInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtInfo.Image = global::DeltaElektronika.Properties.Resources.info;
-            this.tsbtInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtInfo.Name = "tsbtInfo";
-            this.tsbtInfo.Size = new System.Drawing.Size(23, 22);
-            this.tsbtInfo.Click += new System.EventHandler(this.tsbChangePanel_Click);
-            // 
             // tsbtCommon
             // 
             this.tsbtCommon.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -128,6 +122,15 @@
             this.tsbtCommon.Name = "tsbtCommon";
             this.tsbtCommon.Size = new System.Drawing.Size(23, 22);
             this.tsbtCommon.Click += new System.EventHandler(this.tsbChangePanel_Click);
+            // 
+            // tsbtInfo
+            // 
+            this.tsbtInfo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtInfo.Image = global::DeltaElektronika.Properties.Resources.info;
+            this.tsbtInfo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtInfo.Name = "tsbtInfo";
+            this.tsbtInfo.Size = new System.Drawing.Size(23, 22);
+            this.tsbtInfo.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
             // tsbtDebug
             // 
@@ -147,6 +150,15 @@
             this.tsbtRefresh.Name = "tsbtRefresh";
             this.tsbtRefresh.Size = new System.Drawing.Size(23, 22);
             this.tsbtRefresh.Click += new System.EventHandler(this.tsbtRefresh_Click);
+            // 
+            // tsbtHelp
+            // 
+            this.tsbtHelp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtHelp.Image = global::DeltaElektronika.Properties.Resources.question;
+            this.tsbtHelp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtHelp.Name = "tsbtHelp";
+            this.tsbtHelp.Size = new System.Drawing.Size(23, 22);
+            this.tsbtHelp.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
             // DevicePanel
             // 
@@ -177,5 +189,6 @@
         private System.Windows.Forms.ToolStripButton tsbtSequencer;
         private System.Windows.Forms.ToolStripButton tsbtRefresh;
         private System.Windows.Forms.ToolStripButton tsbtCommon;
+        private System.Windows.Forms.ToolStripButton tsbtHelp;
     }
 }

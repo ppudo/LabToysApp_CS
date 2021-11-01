@@ -31,10 +31,11 @@
             this.tsContainer = new System.Windows.Forms.ToolStripContainer();
             this.tsDS1000Z = new System.Windows.Forms.ToolStrip();
             this.tslName = new System.Windows.Forms.ToolStripLabel();
+            this.tstbError = new System.Windows.Forms.ToolStripTextBox();
             this.tsbtHome = new System.Windows.Forms.ToolStripButton();
+            this.tsbtCommon = new System.Windows.Forms.ToolStripButton();
             this.tsbtInfo = new System.Windows.Forms.ToolStripButton();
             this.tsbtDebug = new System.Windows.Forms.ToolStripButton();
-            this.tstbError = new System.Windows.Forms.ToolStripTextBox();
             this.tsContainer.TopToolStripPanel.SuspendLayout();
             this.tsContainer.SuspendLayout();
             this.tsDS1000Z.SuspendLayout();
@@ -67,12 +68,13 @@
             this.tsDS1000Z.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tslName,
             this.tsbtHome,
+            this.tsbtCommon,
             this.tsbtInfo,
             this.tsbtDebug,
             this.tstbError});
             this.tsDS1000Z.Location = new System.Drawing.Point(3, 0);
             this.tsDS1000Z.Name = "tsDS1000Z";
-            this.tsDS1000Z.Size = new System.Drawing.Size(256, 25);
+            this.tsDS1000Z.Size = new System.Drawing.Size(310, 25);
             this.tsDS1000Z.TabIndex = 1;
             // 
             // tslName
@@ -80,6 +82,12 @@
             this.tslName.Name = "tslName";
             this.tslName.Size = new System.Drawing.Size(82, 22);
             this.tslName.Text = "Rigol DS1000Z";
+            // 
+            // tstbError
+            // 
+            this.tstbError.Name = "tstbError";
+            this.tstbError.ReadOnly = true;
+            this.tstbError.Size = new System.Drawing.Size(100, 25);
             // 
             // tsbtHome
             // 
@@ -89,6 +97,15 @@
             this.tsbtHome.Name = "tsbtHome";
             this.tsbtHome.Size = new System.Drawing.Size(23, 22);
             this.tsbtHome.Click += new System.EventHandler(this.tsbChangePanel_Click);
+            // 
+            // tsbtCommon
+            // 
+            this.tsbtCommon.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtCommon.Image = global::Rigol.Properties.Resources.standard;
+            this.tsbtCommon.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtCommon.Name = "tsbtCommon";
+            this.tsbtCommon.Size = new System.Drawing.Size(23, 22);
+            this.tsbtCommon.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
             // tsbtInfo
             // 
@@ -107,13 +124,6 @@
             this.tsbtDebug.Name = "tsbtDebug";
             this.tsbtDebug.Size = new System.Drawing.Size(23, 22);
             this.tsbtDebug.Click += new System.EventHandler(this.tsbChangePanel_Click);
-            // 
-            // tstbError
-            // 
-            this.tstbError.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.tstbError.Name = "tstbError";
-            this.tstbError.ReadOnly = true;
-            this.tstbError.Size = new System.Drawing.Size(100, 25);
             // 
             // DevicePanel
             // 
@@ -141,5 +151,6 @@
         private System.Windows.Forms.ToolStripButton tsbtInfo;
         private System.Windows.Forms.ToolStripButton tsbtDebug;
         private System.Windows.Forms.ToolStripTextBox tstbError;
+        private System.Windows.Forms.ToolStripButton tsbtCommon;
     }
 }
