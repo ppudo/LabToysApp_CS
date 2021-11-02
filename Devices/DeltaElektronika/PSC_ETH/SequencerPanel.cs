@@ -64,25 +64,25 @@ namespace DeltaElektronika.PSC_ETH
         //-----------------------------------------------------------------------------------------
         public void DisplayDeviceStatus()
         {
-            if (device.DeviceStatus.SelectedSequence.Length > 0)
+            if (device.Status.SelectedSequence.Length > 0)
             {
-                if (tbSequenceName.Text != device.DeviceStatus.SelectedSequence)
+                if (tbSequenceName.Text != device.Status.SelectedSequence)
                 {
-                    SetTextControl(tbSequenceName, device.DeviceStatus.SelectedSequence);
+                    SetTextControl(tbSequenceName, device.Status.SelectedSequence);
                 }
 
-                if( device.DeviceStatus.SequenceStatus.State != LabToys.DeltaElektronika.PSC_ETH.SequenceState.ERROR )
+                if (device.Status.SequenceStatus.State != LabToys.DeltaElektronika.PSC_ETH.SequenceState.ERROR )
                 {
-                    switch(device.DeviceStatus.SequenceStatus.State)
+                    switch (device.Status.SequenceStatus.State)
                     {
                         case LabToys.DeltaElektronika.PSC_ETH.SequenceState.STOP:
                             SetTextControl(tbSequenceStatus, "STOP" );
                             break;
                         case LabToys.DeltaElektronika.PSC_ETH.SequenceState.RUN:
-                            SetTextControl(tbSequenceStatus, "RUN, " + device.DeviceStatus.SequenceStatus.Idx.ToString() );
+                            SetTextControl(tbSequenceStatus, "RUN, " + device.Status.SequenceStatus.Idx.ToString() );
                             break;
                         case LabToys.DeltaElektronika.PSC_ETH.SequenceState.PAUSE:
-                            SetTextControl(tbSequenceStatus, "PAUSE, " + device.DeviceStatus.SequenceStatus.Idx.ToString());
+                            SetTextControl(tbSequenceStatus, "PAUSE, " + device.Status.SequenceStatus.Idx.ToString());
                             break;
                         default:
                             SetTextControl(tbSequenceStatus, "" );

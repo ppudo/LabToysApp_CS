@@ -71,32 +71,32 @@ namespace DeltaElektronika.PSC_ETH
         //-----------------------------------------------------------------------------------------
         public void DisplayDeviceStatus()
         {
-            if (!float.IsNaN(device.DeviceStatus.MeasuredVoltage))
+            if (!float.IsNaN(device.Status.MeasuredVoltage))
             {
-                SetTextControl(tbMeasuredVoltage, device.DeviceStatus.MeasuredVoltage.ToString("0.0000") + " V");
+                SetTextControl(tbMeasuredVoltage, device.Status.MeasuredVoltage.ToString("0.0000") + " V");
             }
-            if (!float.IsNaN(device.DeviceStatus.MeasuredCurrent))
+            if (!float.IsNaN(device.Status.MeasuredCurrent))
             {
-                SetTextControl(tbMeasuredCurrent, device.DeviceStatus.MeasuredCurrent.ToString("0.0000") + " A");
+                SetTextControl(tbMeasuredCurrent, device.Status.MeasuredCurrent.ToString("0.0000") + " A");
             }
-            if( !float.IsNaN(device.DeviceStatus.OutputPower) )
+            if( !float.IsNaN(device.Status.OutputPower) )
             {
-                if( device.DeviceStatus.OutputPower > 10.0 )
+                if (device.Status.OutputPower > 10.0 )
                 {
-                    SetTextControl(tbPower, device.DeviceStatus.OutputPower.ToString("0.00") + " W");
+                    SetTextControl(tbPower, device.Status.OutputPower.ToString("0.00") + " W");
                 }
                 else
                 {
-                    SetTextControl(tbPower, (device.DeviceStatus.OutputPower*1000.0).ToString("0") + " mW");
+                    SetTextControl(tbPower, (device.Status.OutputPower*1000.0).ToString("0") + " mW");
                 }
             }
 
             //-----------------------------------
-            if (device.DeviceStatus.DigitalOutputs != int.MinValue)
+            if (device.Status.DigitalOutputs != int.MinValue)
             {
                 for( int i=0; i<digitalOutputs.Length; i++ )
                 {
-                    if ((device.DeviceStatus.DigitalOutputs & (1 << i)) != 0)
+                    if ((device.Status.DigitalOutputs & (1 << i)) != 0)
                     {
                         SetTextControl(digitalOutputs[i], "1");
                         SetControlBackColor(digitalOutputs[i], Color.YellowGreen);
@@ -110,11 +110,11 @@ namespace DeltaElektronika.PSC_ETH
             }
 
             //-----------------------------------
-            if (device.DeviceStatus.DigitalInputs != int.MinValue)
+            if (device.Status.DigitalInputs != int.MinValue)
             {
                 for (int i = 0; i < digitalInputs.Length; i++)
                 {
-                    if ((device.DeviceStatus.DigitalInputs & (1 << i)) != 0)
+                    if ((device.Status.DigitalInputs & (1 << i)) != 0)
                     {
                         SetTextControl(digitalInputs[i], "1");
                         SetControlBackColor(digitalInputs[i], Color.YellowGreen);
