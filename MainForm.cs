@@ -181,6 +181,10 @@ namespace LabToysApp
         /// <param name="lang">Selected language</param>
         private void SetLanguage(string lang)
         {
+            System.Globalization.CultureInfo culture = (System.Globalization.CultureInfo)System.Threading.Thread.CurrentThread.CurrentCulture.Clone();
+            culture.NumberFormat.NumberDecimalSeparator = ".";
+            System.Threading.Thread.CurrentThread.CurrentCulture = culture;
+
             if (lang == "")
             {
                 System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(System.Globalization.CultureInfo.InstalledUICulture.Name);

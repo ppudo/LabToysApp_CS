@@ -83,11 +83,11 @@ namespace DeltaElektronika.PSC_ETH
             {
                 if( device.DeviceStatus.OutputPower > 10.0 )
                 {
-                    SetTextControl(tbMeasuredCurrent, device.DeviceStatus.MeasuredCurrent.ToString("0.00") + " W");
+                    SetTextControl(tbPower, device.DeviceStatus.OutputPower.ToString("0.00") + " W");
                 }
                 else
                 {
-                    SetTextControl(tbMeasuredCurrent, (device.DeviceStatus.MeasuredCurrent*1000.0).ToString("0") + " mW");
+                    SetTextControl(tbPower, (device.DeviceStatus.OutputPower*1000.0).ToString("0") + " mW");
                 }
             }
 
