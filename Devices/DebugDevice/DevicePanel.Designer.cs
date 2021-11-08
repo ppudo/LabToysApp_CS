@@ -60,6 +60,9 @@
             this.nudLanPort = new System.Windows.Forms.NumericUpDown();
             this.tbLanIP = new System.Windows.Forms.TextBox();
             this.lbLanIP = new System.Windows.Forms.Label();
+            this.btFree = new System.Windows.Forms.Button();
+            this.tbDebugInfo = new System.Windows.Forms.TextBox();
+            this.btClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbDebug)).BeginInit();
             this.tcDebug.SuspendLayout();
             this.tpLan.SuspendLayout();
@@ -108,11 +111,14 @@
             this.tcDebug.Location = new System.Drawing.Point(3, 59);
             this.tcDebug.Name = "tcDebug";
             this.tcDebug.SelectedIndex = 0;
-            this.tcDebug.Size = new System.Drawing.Size(623, 431);
+            this.tcDebug.Size = new System.Drawing.Size(767, 573);
             this.tcDebug.TabIndex = 5;
             // 
             // tpLan
             // 
+            this.tpLan.Controls.Add(this.btClose);
+            this.tpLan.Controls.Add(this.tbDebugInfo);
+            this.tpLan.Controls.Add(this.btFree);
             this.tpLan.Controls.Add(this.btLanDebug3);
             this.tpLan.Controls.Add(this.btLanDebug2);
             this.tpLan.Controls.Add(this.btLanDebug1);
@@ -125,7 +131,7 @@
             this.tpLan.Location = new System.Drawing.Point(4, 22);
             this.tpLan.Name = "tpLan";
             this.tpLan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpLan.Size = new System.Drawing.Size(615, 405);
+            this.tpLan.Size = new System.Drawing.Size(759, 547);
             this.tpLan.TabIndex = 0;
             this.tpLan.Text = "LAN";
             this.tpLan.UseVisualStyleBackColor = true;
@@ -133,7 +139,7 @@
             // btLanDebug3
             // 
             this.btLanDebug3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btLanDebug3.Location = new System.Drawing.Point(168, 376);
+            this.btLanDebug3.Location = new System.Drawing.Point(168, 439);
             this.btLanDebug3.Name = "btLanDebug3";
             this.btLanDebug3.Size = new System.Drawing.Size(75, 23);
             this.btLanDebug3.TabIndex = 18;
@@ -144,7 +150,7 @@
             // btLanDebug2
             // 
             this.btLanDebug2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btLanDebug2.Location = new System.Drawing.Point(87, 376);
+            this.btLanDebug2.Location = new System.Drawing.Point(87, 439);
             this.btLanDebug2.Name = "btLanDebug2";
             this.btLanDebug2.Size = new System.Drawing.Size(75, 23);
             this.btLanDebug2.TabIndex = 17;
@@ -155,7 +161,7 @@
             // btLanDebug1
             // 
             this.btLanDebug1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btLanDebug1.Location = new System.Drawing.Point(6, 376);
+            this.btLanDebug1.Location = new System.Drawing.Point(6, 439);
             this.btLanDebug1.Name = "btLanDebug1";
             this.btLanDebug1.Size = new System.Drawing.Size(75, 23);
             this.btLanDebug1.TabIndex = 16;
@@ -180,9 +186,9 @@
             this.gbCommands.Controls.Add(this.lbLanEnding);
             this.gbCommands.Controls.Add(this.btLanSend);
             this.gbCommands.Controls.Add(this.tbLanInput);
-            this.gbCommands.Location = new System.Drawing.Point(6, 114);
+            this.gbCommands.Location = new System.Drawing.Point(6, 122);
             this.gbCommands.Name = "gbCommands";
-            this.gbCommands.Size = new System.Drawing.Size(603, 256);
+            this.gbCommands.Size = new System.Drawing.Size(744, 311);
             this.gbCommands.TabIndex = 15;
             this.gbCommands.TabStop = false;
             this.gbCommands.Text = "Commands";
@@ -197,7 +203,7 @@
             this.tbLanOutput.Name = "tbLanOutput";
             this.tbLanOutput.ReadOnly = true;
             this.tbLanOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbLanOutput.Size = new System.Drawing.Size(591, 124);
+            this.tbLanOutput.Size = new System.Drawing.Size(729, 179);
             this.tbLanOutput.TabIndex = 18;
             // 
             // chbLanRespond
@@ -302,7 +308,7 @@
             // btLanSend
             // 
             this.btLanSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btLanSend.Location = new System.Drawing.Point(522, 78);
+            this.btLanSend.Location = new System.Drawing.Point(660, 78);
             this.btLanSend.Name = "btLanSend";
             this.btLanSend.Size = new System.Drawing.Size(75, 23);
             this.btLanSend.TabIndex = 8;
@@ -318,8 +324,9 @@
             this.tbLanInput.Multiline = true;
             this.tbLanInput.Name = "tbLanInput";
             this.tbLanInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbLanInput.Size = new System.Drawing.Size(591, 53);
+            this.tbLanInput.Size = new System.Drawing.Size(729, 53);
             this.tbLanInput.TabIndex = 7;
+            this.tbLanInput.Text = "*IDN?";
             // 
             // lbLanError
             // 
@@ -339,7 +346,7 @@
             this.tbLanError.Name = "tbLanError";
             this.tbLanError.ReadOnly = true;
             this.tbLanError.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbLanError.Size = new System.Drawing.Size(306, 89);
+            this.tbLanError.Size = new System.Drawing.Size(447, 89);
             this.tbLanError.TabIndex = 13;
             // 
             // btLanConnect
@@ -471,6 +478,44 @@
             this.lbLanIP.TabIndex = 1;
             this.lbLanIP.Text = "Host IP:";
             // 
+            // btFree
+            // 
+            this.btFree.BackColor = System.Drawing.Color.Gold;
+            this.btFree.Enabled = false;
+            this.btFree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btFree.Location = new System.Drawing.Point(222, 64);
+            this.btFree.Name = "btFree";
+            this.btFree.Size = new System.Drawing.Size(75, 23);
+            this.btFree.TabIndex = 19;
+            this.btFree.Text = "Free";
+            this.btFree.UseVisualStyleBackColor = false;
+            this.btFree.Click += new System.EventHandler(this.btFree_Click);
+            // 
+            // tbDebugInfo
+            // 
+            this.tbDebugInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDebugInfo.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbDebugInfo.Location = new System.Drawing.Point(6, 468);
+            this.tbDebugInfo.Multiline = true;
+            this.tbDebugInfo.Name = "tbDebugInfo";
+            this.tbDebugInfo.ReadOnly = true;
+            this.tbDebugInfo.Size = new System.Drawing.Size(747, 73);
+            this.tbDebugInfo.TabIndex = 20;
+            // 
+            // btClose
+            // 
+            this.btClose.BackColor = System.Drawing.Color.Orange;
+            this.btClose.Enabled = false;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Location = new System.Drawing.Point(222, 93);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(75, 23);
+            this.btClose.TabIndex = 21;
+            this.btClose.Text = "Close";
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
+            // 
             // DevicePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,7 +525,7 @@
             this.Controls.Add(this.lbDebug);
             this.Controls.Add(this.pbDebug);
             this.Name = "DevicePanel";
-            this.Size = new System.Drawing.Size(629, 493);
+            this.Size = new System.Drawing.Size(773, 635);
             ((System.ComponentModel.ISupportInitialize)(this.pbDebug)).EndInit();
             this.tcDebug.ResumeLayout(false);
             this.tpLan.ResumeLayout(false);
@@ -530,5 +575,8 @@
         private System.Windows.Forms.NumericUpDown nudLanPort;
         private System.Windows.Forms.TextBox tbLanIP;
         private System.Windows.Forms.Label lbLanIP;
+        private System.Windows.Forms.Button btFree;
+        private System.Windows.Forms.TextBox tbDebugInfo;
+        private System.Windows.Forms.Button btClose;
     }
 }

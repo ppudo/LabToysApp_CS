@@ -56,7 +56,11 @@ namespace DeltaElektronika.PSC_ETH
         private bool debug = false;
         private string lang = "";
         private LabToys.DeltaElektronika.PSC_ETH device = null;
+
+        //Refresh thread
+        private bool refreshEnable = false;
         private Thread refreshThread = null;
+        private int refreshPeriod = 100;                                                            //time in ms
 
         #region FUNCTIONS
         //-------------------------------------------------------------------------------------------------------------------------------------------
@@ -94,26 +98,31 @@ namespace DeltaElektronika.PSC_ETH
         //-----------------------------------------------------------------------------------------
         private void RefreshFunction()
         {
-            try
+            //loop made every 100ms
+            while (refreshEnable)
             {
-                int messagesDelay = 100;
-
-                while (true)
-                {
-                    if (device.RefreshDeviceStatus(false))
-                    {
-                        RefreshPanels();
-                    }
-
-                    Thread.Sleep(messagesDelay);
-                }
-            }
-            catch (ThreadAbortException)
-            {
-                if (device.RefreshDeviceStatus(true))
+                if (device.RefreshDeviceStatus(false))
                 {
                     RefreshPanels();
                 }
+
+                Thread.Sleep(refreshPeriod);
+            }
+
+            //last read to close loop
+            if (device.RefreshDeviceStatus(false))
+            {
+                RefreshPanels();
+            }
+
+            //abort thread and close connection
+            try
+            {
+                refreshThread.Abort();
+            }
+            catch (ThreadAbortException)
+            {
+                refreshThread = null;
             }
         }
 
@@ -144,8 +153,9 @@ namespace DeltaElektronika.PSC_ETH
         {
             ToolStripButton btn = (ToolStripButton)sender;
 
-            if (btn.BackColor == SystemColors.ControlDark)
+            if (refreshEnable == false)
             {
+                refreshEnable = true;
                 btn.BackColor = Color.LightGreen;
 
                 if (refreshThread == null)
@@ -159,10 +169,8 @@ namespace DeltaElektronika.PSC_ETH
             }
             else
             {
+                refreshEnable = false;
                 btn.BackColor = SystemColors.ControlDark;
-
-                refreshThread.Abort();
-                refreshThread = null;
             }
         }
         #endregion

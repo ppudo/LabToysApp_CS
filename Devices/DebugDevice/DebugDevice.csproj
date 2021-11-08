@@ -30,9 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LabToys, Version=0.2.4.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="LabToys, Version=0.2.4.5, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\LabToys\bin\Release\LabToys.dll</HintPath>
+      <HintPath>..\..\..\LabToys\bin\Debug\LabToys.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
