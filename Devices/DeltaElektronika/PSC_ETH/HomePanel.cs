@@ -35,12 +35,20 @@ namespace DeltaElektronika.PSC_ETH
             {
                 digitalOutputs[i].Tag = (int)i;
             }
+
+            //add memories to panel
+            for( int i=0; i<memories.Length; i++ )
+            {
+                lbMemories.Items.Add(memories[i]);
+            }
         }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private LabToys.DeltaElektronika.PSC_ETH device = null;
         private TextBox[] digitalInputs = null;
         private Button[] digitalOutputs = null;
+        private MemoryData[] memories = new MemoryData[] { new MemoryData( "M1", 12.0F, 10.0F ),
+                                                            new MemoryData( "M2", 13.5F, 10.0F) };
 
         #region FUNCTIONS
         //-------------------------------------------------------------------------------------------------------------------------------------------
@@ -73,11 +81,11 @@ namespace DeltaElektronika.PSC_ETH
         {
             if (!float.IsNaN(device.Status.MeasuredVoltage))
             {
-                SetTextControl(tbMeasuredVoltage, device.Status.MeasuredVoltage.ToString("0.0000") + " V");
+                SetTextControl(tbMeasuredVoltage, device.Status.MeasuredVoltage.ToString("0.00") + " V");
             }
             if (!float.IsNaN(device.Status.MeasuredCurrent))
             {
-                SetTextControl(tbMeasuredCurrent, device.Status.MeasuredCurrent.ToString("0.0000") + " A");
+                SetTextControl(tbMeasuredCurrent, device.Status.MeasuredCurrent.ToString("0.000") + " A");
             }
             if( !float.IsNaN(device.Status.OutputPower) )
             {
@@ -304,6 +312,25 @@ namespace DeltaElektronika.PSC_ETH
 
             Cursor.Current = Cursors.Default;
         }
+
+        //-----------------------------------------------------------------------------------------
+        private void lbMemories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+
+            ListBox box = (ListBox)sender;
+
+            if (box.SelectedItem != null
+                && box.SelectedItem.GetType() == typeof(MemoryData))
+            {
+                MemoryData mem = (MemoryData)box.SelectedItem;
+                nudVoltage.Value = (decimal)mem.Voltage;
+                nudCurrent.Value = (decimal)mem.Current;
+            }
+
+            Cursor.Current = Cursors.Default;
+        }
+
         #endregion
 
         #region DELEGATES
@@ -343,6 +370,34 @@ namespace DeltaElektronika.PSC_ETH
             else
             {
                 control.BackColor = color;
+            }
+        }
+
+        #endregion
+
+        #region
+        //-------------------------------------------------------------------------------------------------------------------------------------------
+        private class MemoryData
+        {
+            private float voltage = 12.0F;
+            private float current = 10.0F;
+            private string name = "M";
+
+            public float Voltage { get => voltage; }
+            public float Current { get => current; }
+            public string Name { get => name; }
+
+            public MemoryData( string name, float voltage, float current )
+            {
+                this.name = name;
+                this.voltage = voltage;
+                this.current = current;
+            }
+
+            //------------------------------------------------------------
+            public override string ToString()
+            {
+                return name + ": " + voltage.ToString("00.00") + "V - " + current.ToString("0.000") + "A";
             }
         }
 

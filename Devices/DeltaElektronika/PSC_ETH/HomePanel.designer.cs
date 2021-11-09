@@ -71,6 +71,7 @@ namespace DeltaElektronika.PSC_ETH
             this.label6 = new System.Windows.Forms.Label();
             this.tbPower = new System.Windows.Forms.TextBox();
             this.gbPower = new System.Windows.Forms.GroupBox();
+            this.lbMemories = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).BeginInit();
             this.gbVoltage.SuspendLayout();
@@ -94,20 +95,20 @@ namespace DeltaElektronika.PSC_ETH
             // 
             this.nudVoltage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nudVoltage.DecimalPlaces = 4;
-            this.nudVoltage.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nudVoltage.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nudVoltage.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.nudVoltage.Location = new System.Drawing.Point(28, 19);
+            this.nudVoltage.Location = new System.Drawing.Point(74, 64);
             this.nudVoltage.Maximum = new decimal(new int[] {
             70,
             0,
             0,
             0});
             this.nudVoltage.Name = "nudVoltage";
-            this.nudVoltage.Size = new System.Drawing.Size(146, 39);
+            this.nudVoltage.Size = new System.Drawing.Size(100, 26);
             this.nudVoltage.TabIndex = 17;
             this.nudVoltage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudVoltage.Value = new decimal(new int[] {
@@ -120,33 +121,33 @@ namespace DeltaElektronika.PSC_ETH
             // tbMeasuredVoltage
             // 
             this.tbMeasuredVoltage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMeasuredVoltage.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbMeasuredVoltage.Location = new System.Drawing.Point(73, 64);
+            this.tbMeasuredVoltage.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbMeasuredVoltage.Location = new System.Drawing.Point(24, 19);
             this.tbMeasuredVoltage.Name = "tbMeasuredVoltage";
             this.tbMeasuredVoltage.ReadOnly = true;
-            this.tbMeasuredVoltage.Size = new System.Drawing.Size(101, 26);
+            this.tbMeasuredVoltage.Size = new System.Drawing.Size(150, 39);
             this.tbMeasuredVoltage.TabIndex = 19;
-            this.tbMeasuredVoltage.Text = "XX.XXXX V";
+            this.tbMeasuredVoltage.Text = "XX.XX V";
             this.tbMeasuredVoltage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // nudCurrent
             // 
             this.nudCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nudCurrent.DecimalPlaces = 4;
-            this.nudCurrent.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nudCurrent.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nudCurrent.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.nudCurrent.Location = new System.Drawing.Point(28, 19);
+            this.nudCurrent.Location = new System.Drawing.Point(74, 64);
             this.nudCurrent.Maximum = new decimal(new int[] {
             240,
             0,
             0,
             65536});
             this.nudCurrent.Name = "nudCurrent";
-            this.nudCurrent.Size = new System.Drawing.Size(146, 39);
+            this.nudCurrent.Size = new System.Drawing.Size(100, 26);
             this.nudCurrent.TabIndex = 20;
             this.nudCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudCurrent.Value = new decimal(new int[] {
@@ -159,13 +160,13 @@ namespace DeltaElektronika.PSC_ETH
             // tbMeasuredCurrent
             // 
             this.tbMeasuredCurrent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMeasuredCurrent.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.tbMeasuredCurrent.Location = new System.Drawing.Point(73, 64);
+            this.tbMeasuredCurrent.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.tbMeasuredCurrent.Location = new System.Drawing.Point(24, 19);
             this.tbMeasuredCurrent.Name = "tbMeasuredCurrent";
             this.tbMeasuredCurrent.ReadOnly = true;
-            this.tbMeasuredCurrent.Size = new System.Drawing.Size(101, 26);
+            this.tbMeasuredCurrent.Size = new System.Drawing.Size(150, 39);
             this.tbMeasuredCurrent.TabIndex = 22;
-            this.tbMeasuredCurrent.Text = "XX.XXXX A";
+            this.tbMeasuredCurrent.Text = "XX.XXX A";
             this.tbMeasuredCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btOutput
@@ -599,7 +600,7 @@ namespace DeltaElektronika.PSC_ETH
             this.tbPower.ReadOnly = true;
             this.tbPower.Size = new System.Drawing.Size(101, 26);
             this.tbPower.TabIndex = 29;
-            this.tbPower.Text = "XX.XXXX W";
+            this.tbPower.Text = "XX.XX W";
             this.tbPower.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // gbPower
@@ -612,10 +613,24 @@ namespace DeltaElektronika.PSC_ETH
             this.gbPower.TabStop = false;
             this.gbPower.Text = "Power";
             // 
+            // lbMemories
+            // 
+            this.lbMemories.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbMemories.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbMemories.FormattingEnabled = true;
+            this.lbMemories.ItemHeight = 19;
+            this.lbMemories.Location = new System.Drawing.Point(375, 36);
+            this.lbMemories.Name = "lbMemories";
+            this.lbMemories.Size = new System.Drawing.Size(220, 365);
+            this.lbMemories.TabIndex = 2;
+            this.lbMemories.SelectedIndexChanged += new System.EventHandler(this.lbMemories_SelectedIndexChanged);
+            // 
             // HomePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbMemories);
             this.Controls.Add(this.gbPower);
             this.Controls.Add(this.gbOutputs);
             this.Controls.Add(this.gbInputs);
@@ -624,7 +639,7 @@ namespace DeltaElektronika.PSC_ETH
             this.Controls.Add(this.btOutput);
             this.Controls.Add(this.lbTitle);
             this.Name = "HomePanel";
-            this.Size = new System.Drawing.Size(406, 356);
+            this.Size = new System.Drawing.Size(612, 423);
             ((System.ComponentModel.ISupportInitialize)(this.nudVoltage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrent)).EndInit();
             this.gbVoltage.ResumeLayout(false);
@@ -686,5 +701,6 @@ namespace DeltaElektronika.PSC_ETH
         private System.Windows.Forms.Button btRemoteCurrent;
         private System.Windows.Forms.TextBox tbPower;
         private System.Windows.Forms.GroupBox gbPower;
+        private System.Windows.Forms.ListBox lbMemories;
     }
 }
