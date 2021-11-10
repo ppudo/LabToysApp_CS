@@ -313,6 +313,7 @@ namespace DeltaElektronika.PSC_ETH
                     count++;
                 }
 
+                file.Close();
                 Array.Resize(ref sequence, count);
 
                 if( !device.SendSequence( name, sequence ) )

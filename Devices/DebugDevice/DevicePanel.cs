@@ -182,7 +182,7 @@ namespace DebugDevice
 
                     if (tbLanInput.Text[tbLanInput.Text.Length - 1] == '?')
                     {
-                        string ans = lanDevice.SendCommandGetAns(tbLanInput.Text, chbLanStayConnected.Checked, connIdx);
+                        string ans = lanDevice.SendCommandGetAns(tbLanInput.Text, 1024, chbLanStayConnected.Checked, connIdx);
                         if( ans.Length == 0 )
                         {
                             tbLanError.Text = "ans is empty";
@@ -393,8 +393,8 @@ namespace DebugDevice
                 return false;
             }
 
-            string ans = lanDevice.SendCommandGetAns("*IDN?", false, loopConnIdx);
-            ans = lanDevice.SendCommandGetAns("*TST?", false, loopConnIdx);
+            string ans = lanDevice.SendCommandGetAns("*IDN?", 1024, false, loopConnIdx);
+            ans = lanDevice.SendCommandGetAns("*TST?", 1024, false, loopConnIdx);
 
             if (closeConnection)
             {
@@ -419,8 +419,8 @@ namespace DebugDevice
                 return false;
             }
 
-            string ans = lanDevice.SendCommandGetAns("*IDN?", false, loopConnIdx2);
-            ans = lanDevice.SendCommandGetAns("*TST?", false, loopConnIdx2);
+            string ans = lanDevice.SendCommandGetAns("*IDN?", 1024, false, loopConnIdx2);
+            ans = lanDevice.SendCommandGetAns("*TST?", 1024, false, loopConnIdx2);
 
             if (closeConnection)
             {
