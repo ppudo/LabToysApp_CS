@@ -37,6 +37,8 @@ namespace DeltaElektronika.PSC_ETH
             }
 
             //add memories to panel
+            //lbMemories.Items.Add("None");
+
             for( int i=0; i<memories.Length; i++ )
             {
                 lbMemories.Items.Add(memories[i]);
@@ -47,7 +49,7 @@ namespace DeltaElektronika.PSC_ETH
         private LabToys.DeltaElektronika.PSC_ETH device = null;
         private TextBox[] digitalInputs = null;
         private Button[] digitalOutputs = null;
-        private MemoryData[] memories = new MemoryData[] { new MemoryData( "M1", 12.0F, 10.0F ),
+        private MemoryData[] memories = new MemoryData[] {  new MemoryData( "M1", 12.0F, 10.0F ),
                                                             new MemoryData( "M2", 13.5F, 10.0F) };
 
         #region FUNCTIONS

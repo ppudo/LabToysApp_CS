@@ -97,6 +97,18 @@ namespace DeltaElektronika.PSC_ETH
         }
 
         //-----------------------------------------------------------------------------------------
+        private void dgvSequence_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            DataGridView data = (DataGridView)sender;
+            DataGridViewRow row = data.Rows[e.RowIndex];
+
+            for (int i = 0; i < row.Cells.Count; i++)
+            {
+                row.Cells[i].Style.BackColor = Color.Orange;
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------
         private void btDeleteRow_Click(object sender, EventArgs e)
         {
             //delete rows and find startIdx

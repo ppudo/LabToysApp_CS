@@ -615,14 +615,15 @@ namespace DeltaElektronika.PSC_ETH
             // 
             // lbMemories
             // 
-            this.lbMemories.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbMemories.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbMemories.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.lbMemories.FormattingEnabled = true;
             this.lbMemories.ItemHeight = 19;
             this.lbMemories.Location = new System.Drawing.Point(375, 36);
             this.lbMemories.Name = "lbMemories";
-            this.lbMemories.Size = new System.Drawing.Size(220, 365);
+            this.lbMemories.Size = new System.Drawing.Size(234, 365);
             this.lbMemories.TabIndex = 2;
             this.lbMemories.SelectedIndexChanged += new System.EventHandler(this.lbMemories_SelectedIndexChanged);
             // 

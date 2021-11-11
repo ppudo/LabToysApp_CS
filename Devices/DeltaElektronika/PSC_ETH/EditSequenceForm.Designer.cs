@@ -73,6 +73,7 @@ namespace DeltaElektronika.PSC_ETH
             this.dgvSequence.Name = "dgvSequence";
             this.dgvSequence.Size = new System.Drawing.Size(370, 572);
             this.dgvSequence.TabIndex = 3;
+            this.dgvSequence.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvSequence_CellBeginEdit);
             this.dgvSequence.UserAddedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvSequence_UserAddedRow);
             this.dgvSequence.UserDeletedRow += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvSequence_UserDeletedRow);
             // 
