@@ -302,8 +302,24 @@ namespace DebugDevice
         //-----------------------------------------------------------------------------------------
         private void btLanDebug3_Click(object sender, EventArgs e)
         {
+            log = new Logger("test\\test2\\test.csv");
+            log.IncludeIdx = true;
+            log.IncludeTimeFromStart = true;
+            log.MakeHeaders(new string[] { "i", "Test1", "Test2", "Test3" });
 
+            Random rand = new Random((int)DateTime.Now.Ticks);
+
+            for( int i=0; i<100; i++ )
+            {
+                log.Log(new object[] { i, rand.NextDouble(), (int)(rand.NextDouble()*100), "test_"+i.ToString() });
+                Thread.Sleep(5000);
+                Console.WriteLine("Log: " + i.ToString());
+            }
+
+            log.CloseFile();
         }
+
+        private LabToys.Logger log = null;
 
         //-------------------------------------------------------------------------------------------------------------------------------------------
         //DEBUG FUNCTIONS
