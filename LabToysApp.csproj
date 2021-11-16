@@ -167,6 +167,10 @@
     <Content Include="oscilloscope.ico" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Devices\CTS\CTS.csproj">
+      <Project>{b82b6ea4-ee73-4185-bc05-820dfb31cda0}</Project>
+      <Name>CTS</Name>
+    </ProjectReference>
     <ProjectReference Include="Devices\DebugDevice\DebugDevice.csproj">
       <Project>{e8dd3bfa-499e-43f1-8d81-7f339b9c7a39}</Project>
       <Name>DebugDevice</Name>

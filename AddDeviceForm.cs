@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Rigol.DS1000Z;
 using DeltaElektronika.PSC_ETH;
+using CTS.ASCII_Proto_ETH;
 
 namespace LabToysApp
 {
@@ -162,14 +163,23 @@ namespace LabToysApp
         };
 
         //-----------------------------------------------------------------------------------------
+        // Delta Elektronika
         private readonly static Model[] deltaElektronika = new Model[]
         {
             new Model( "PSC-ETH", typeof( DeltaElektronika.PSC_ETH.AddForm ), 3 )
         };
 
+        //-----------------------------------------------------------------------------------------
+        // CTS
+        private readonly static Model[] cts = new Model[]
+        {
+            new Model( "ASCII Protocol ETH", typeof( CTS.ASCII_Proto_ETH.AddForm ), 4 )
+        };
+
         //-------------------------------------------------------------------------------------------------------------------------------------------
         private Manufacturer[] manufacturers = new Manufacturer[]
         {
+            new Manufacturer( "CTS", cts ),
             new Manufacturer( "Delta Elektronika", deltaElektronika ),
             new Manufacturer( "Rigol", rigol )
         };

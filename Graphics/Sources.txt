@@ -9,6 +9,7 @@ Flatart
 -------------------------------------------------
 Freepik
 		bug.png					- https://www.flaticon.com/free-icon/bug_784558						- https://www.flaticon.com/authors/freepik			- Freepik
+		cryogenic.png				- https://www.flaticon.com/free-icon/cryogenic_5978026			- https://www.flaticon.com/authors/freepik			- Freepik
 		poland.png				- https://www.flaticon.com/free-icon/republic-of-poland_197529		- https://www.flaticon.com/authors/freepik			- Freepik
 		power-supply.png		- https://www.flaticon.com/free-icon/power-supply_1699453			- https://www.flaticon.com/authors/freepik			- Freepik
 		translate.png			- https://www.flaticon.com/free-icon/translate_281759				- https://www.flaticon.com/authors/freepik			- Freepik

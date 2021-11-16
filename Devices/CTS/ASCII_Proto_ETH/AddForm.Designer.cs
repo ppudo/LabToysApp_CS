@@ -1,5 +1,5 @@
 ﻿
-namespace DeltaElektronika.PSC_ETH
+namespace CTS.ASCII_Proto_ETH
 {
     partial class AddForm
     {
@@ -30,64 +30,21 @@ namespace DeltaElektronika.PSC_ETH
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddForm));
-            this.tbName = new System.Windows.Forms.TextBox();
-            this.lbName = new System.Windows.Forms.Label();
-            this.btCancel = new System.Windows.Forms.Button();
-            this.btAdd = new System.Windows.Forms.Button();
             this.nudPort = new System.Windows.Forms.NumericUpDown();
             this.lbPort = new System.Windows.Forms.Label();
             this.tbIPaddress = new System.Windows.Forms.TextBox();
             this.lbIPaddress = new System.Windows.Forms.Label();
+            this.btCancel = new System.Windows.Forms.Button();
+            this.btAdd = new System.Windows.Forms.Button();
+            this.tbName = new System.Windows.Forms.TextBox();
+            this.lbName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).BeginInit();
             this.SuspendLayout();
-            // 
-            // tbName
-            // 
-            this.tbName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbName.Location = new System.Drawing.Point(89, 12);
-            this.tbName.MaxLength = 32;
-            this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(116, 20);
-            this.tbName.TabIndex = 7;
-            this.tbName.Text = "PSC-ETH";
-            this.tbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lbName
-            // 
-            this.lbName.AutoSize = true;
-            this.lbName.Location = new System.Drawing.Point(12, 15);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(38, 13);
-            this.lbName.TabIndex = 6;
-            this.lbName.Text = "Name:";
-            // 
-            // btCancel
-            // 
-            this.btCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btCancel.Location = new System.Drawing.Point(12, 101);
-            this.btCancel.Name = "btCancel";
-            this.btCancel.Size = new System.Drawing.Size(75, 23);
-            this.btCancel.TabIndex = 9;
-            this.btCancel.Text = "Cancel";
-            this.btCancel.UseVisualStyleBackColor = true;
-            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
-            // 
-            // btAdd
-            // 
-            this.btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btAdd.Location = new System.Drawing.Point(130, 101);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(75, 23);
-            this.btAdd.TabIndex = 8;
-            this.btAdd.Text = "Add";
-            this.btAdd.UseVisualStyleBackColor = true;
-            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // nudPort
             // 
             this.nudPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudPort.Location = new System.Drawing.Point(89, 64);
+            this.nudPort.Location = new System.Drawing.Point(90, 64);
             this.nudPort.Maximum = new decimal(new int[] {
             65535,
             0,
@@ -98,7 +55,7 @@ namespace DeltaElektronika.PSC_ETH
             this.nudPort.TabIndex = 3;
             this.nudPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.nudPort.Value = new decimal(new int[] {
-            8462,
+            1080,
             0,
             0,
             0});
@@ -115,7 +72,7 @@ namespace DeltaElektronika.PSC_ETH
             // tbIPaddress
             // 
             this.tbIPaddress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbIPaddress.Location = new System.Drawing.Point(89, 38);
+            this.tbIPaddress.Location = new System.Drawing.Point(90, 38);
             this.tbIPaddress.Name = "tbIPaddress";
             this.tbIPaddress.Size = new System.Drawing.Size(116, 20);
             this.tbIPaddress.TabIndex = 1;
@@ -131,13 +88,54 @@ namespace DeltaElektronika.PSC_ETH
             this.lbIPaddress.TabIndex = 0;
             this.lbIPaddress.Text = "IP address:";
             // 
+            // btCancel
+            // 
+            this.btCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btCancel.Location = new System.Drawing.Point(12, 107);
+            this.btCancel.Name = "btCancel";
+            this.btCancel.Size = new System.Drawing.Size(75, 23);
+            this.btCancel.TabIndex = 15;
+            this.btCancel.Text = "Cancel";
+            this.btCancel.UseVisualStyleBackColor = true;
+            // 
+            // btAdd
+            // 
+            this.btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAdd.Location = new System.Drawing.Point(131, 107);
+            this.btAdd.Name = "btAdd";
+            this.btAdd.Size = new System.Drawing.Size(75, 23);
+            this.btAdd.TabIndex = 14;
+            this.btAdd.Text = "Add";
+            this.btAdd.UseVisualStyleBackColor = true;
+            // 
+            // tbName
+            // 
+            this.tbName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbName.Location = new System.Drawing.Point(90, 12);
+            this.tbName.MaxLength = 32;
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(116, 20);
+            this.tbName.TabIndex = 13;
+            this.tbName.Text = "ASCII-Proto-ETH";
+            this.tbName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lbName
+            // 
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(12, 15);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(38, 13);
+            this.lbName.TabIndex = 12;
+            this.lbName.Text = "Name:";
+            // 
             // AddForm
             // 
             this.AcceptButton = this.btAdd;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btCancel;
-            this.ClientSize = new System.Drawing.Size(217, 136);
+            this.ClientSize = new System.Drawing.Size(218, 142);
             this.Controls.Add(this.lbPort);
             this.Controls.Add(this.nudPort);
             this.Controls.Add(this.btCancel);
@@ -150,8 +148,7 @@ namespace DeltaElektronika.PSC_ETH
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Add PSC-ETH";
+            this.Text = "Add ASCII Proto ETH";
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -160,13 +157,13 @@ namespace DeltaElektronika.PSC_ETH
 
         #endregion
 
-        private System.Windows.Forms.TextBox tbName;
-        private System.Windows.Forms.Label lbName;
-        private System.Windows.Forms.Button btCancel;
-        private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.NumericUpDown nudPort;
         private System.Windows.Forms.Label lbPort;
         private System.Windows.Forms.TextBox tbIPaddress;
         private System.Windows.Forms.Label lbIPaddress;
+        private System.Windows.Forms.Button btCancel;
+        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.TextBox tbName;
+        private System.Windows.Forms.Label lbName;
     }
 }

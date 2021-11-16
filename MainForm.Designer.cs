@@ -238,6 +238,7 @@ namespace LabToysApp
             this.ilDevicesList.Images.SetKeyName(1, "bug.png");
             this.ilDevicesList.Images.SetKeyName(2, "oscilloscope.png");
             this.ilDevicesList.Images.SetKeyName(3, "power-supply.png");
+            this.ilDevicesList.Images.SetKeyName(4, "cryogenic.png");
             // 
             // MainForm
             // 

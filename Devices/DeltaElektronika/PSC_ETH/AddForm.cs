@@ -50,8 +50,6 @@ namespace DeltaElektronika.PSC_ETH
             //change label in app
             this.Text = Lang.PSC_ETH.AddForm.AddForm_Text;
             this.lbName.Text = Lang.PSC_ETH.AddForm.lbName_Text;
-            this.chbLan.Text = Lang.PSC_ETH.AddForm.chbLAN_Text;
-            this.gbLan.Text = Lang.PSC_ETH.AddForm.gbLAN_Text;
             this.lbIPaddress.Text = Lang.PSC_ETH.AddForm.lbIPaddress_Text;
             this.lbPort.Text = Lang.PSC_ETH.AddForm.lbPort_Text;
             this.btCancel.Text = Lang.PSC_ETH.AddForm.btCancel_Text;
@@ -75,10 +73,7 @@ namespace DeltaElektronika.PSC_ETH
                 return;
             }                                            
 
-            if (chbLan.Checked)
-            {
-                this.Tag = new DevicePanel(new LabToys.DeltaElektronika.PSC_ETH(tbIPaddress.Text, (ushort)nudPort.Value), tbName.Text, LANGUAGE, DEBUG);
-            }
+            this.Tag = new DevicePanel(new LabToys.DeltaElektronika.PSC_ETH(tbIPaddress.Text, (ushort)nudPort.Value), tbName.Text, LANGUAGE, DEBUG);
 
             this.Text = tbName.Text;                        //save name of device in form Text
             this.DialogResult = DialogResult.OK;
