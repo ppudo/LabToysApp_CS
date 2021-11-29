@@ -1,3 +1,9 @@
 ﻿Freepik
-		cryogenic.png				- https://www.flaticon.com/free-icon/cryogenic_5978026			- https://www.flaticon.com/authors/freepik			- Freepik
+		cryogenic.png			- https://www.flaticon.com/free-icon/cryogenic_5978026				- https://www.flaticon.com/authors/freepik			- Freepik
+		bug.png					- https://www.flaticon.com/free-icon/bug_784558						- https://www.flaticon.com/authors/freepik			- Freepik
+
+-------------------------------------------------
+Pixel perfect
+		home.png				- https://www.flaticon.com/free-icon/home_1828556					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
+		info.png				- https://www.flaticon.com/free-icon/info_1828558					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		

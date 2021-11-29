@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LabToys">
+      <HintPath>..\..\..\LabToys\bin\Debug\LabToys.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -48,33 +51,108 @@
     <Compile Include="ASCII_Proto_ETH\AddForm.Designer.cs">
       <DependentUpon>AddForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ASCII_Proto_ETH\CommonPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ASCII_Proto_ETH\CommonPanel.Designer.cs">
+      <DependentUpon>CommonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASCII_Proto_ETH\DebugPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ASCII_Proto_ETH\DebugPanel.Designer.cs">
+      <DependentUpon>DebugPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="ASCII_Proto_ETH\DevicePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ASCII_Proto_ETH\DevicePanel.Designer.cs">
       <DependentUpon>DevicePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="ASCII_Proto_ETH\HomePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ASCII_Proto_ETH\HomePanel.Designer.cs">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ASCII_Proto_ETH\InfoPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ASCII_Proto_ETH\InfoPanel.Designer.cs">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\ASCII_Proto_ETH\AddForm.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddForm.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\ASCII_Proto_ETH\CommonPanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonPanel.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Lang\ASCII_Proto_ETH\DevicePanel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DevicePanel.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ASCII_Proto_ETH\AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ASCII_Proto_ETH\CommonPanel.resx">
+      <DependentUpon>CommonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASCII_Proto_ETH\DebugPanel.resx">
+      <DependentUpon>DebugPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ASCII_Proto_ETH\DevicePanel.resx">
       <DependentUpon>DevicePanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ASCII_Proto_ETH\HomePanel.resx">
+      <DependentUpon>HomePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ASCII_Proto_ETH\InfoPanel.resx">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\ASCII_Proto_ETH\AddForm.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AddForm.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\ASCII_Proto_ETH\CommonPanel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonPanel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang\ASCII_Proto_ETH\DevicePanel.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DevicePanel.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Lang\ASCII_Proto_ETH\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="ASCII_Proto_ETH\Graphics\bug.png" />
+    <None Include="ASCII_Proto_ETH\Graphics\cryogenic.png" />
+    <Content Include="ASCII_Proto_ETH\Graphics\home.png" />
+    <Content Include="ASCII_Proto_ETH\Graphics\info.png" />
     <Content Include="ASCII_Proto_ETH\Graphics\Sources.txt" />
+    <None Include="ASCII_Proto_ETH\Graphics\standard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_StartDate="2021/11/16" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
+      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/11/16" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

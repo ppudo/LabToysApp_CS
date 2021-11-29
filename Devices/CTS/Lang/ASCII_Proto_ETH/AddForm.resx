@@ -117,7 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="tsASCIIprotoETH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
+  <data name="AddForm_Text" xml:space="preserve">
+    <value>Add DS1000Z</value>
+  </data>
+  <data name="btAdd_Text" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="btCancel_Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="lbIPaddress_Text" xml:space="preserve">
+    <value>IP address:</value>
+  </data>
+  <data name="lbName_Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="lbPort_Text" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="WrongIPAddress_Caption" xml:space="preserve">
+    <value>Wrong IP address</value>
+  </data>
+  <data name="WrongIPAddress_Text" xml:space="preserve">
+    <value>Please enter device IP address or hostname</value>
+  </data>
 </root>

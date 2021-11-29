@@ -240,7 +240,6 @@ namespace Rigol.DS1000Z
             // 
             // lbVersion
             // 
-            this.lbVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbVersion.AutoSize = true;
             this.lbVersion.Location = new System.Drawing.Point(133, 36);
             this.lbVersion.Name = "lbVersion";

@@ -98,6 +98,7 @@ namespace CTS.ASCII_Proto_ETH
             this.btCancel.TabIndex = 15;
             this.btCancel.Text = "Cancel";
             this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
             // btAdd
             // 
@@ -108,6 +109,7 @@ namespace CTS.ASCII_Proto_ETH
             this.btAdd.TabIndex = 14;
             this.btAdd.Text = "Add";
             this.btAdd.UseVisualStyleBackColor = true;
+            this.btAdd.Click += new System.EventHandler(this.btAdd_Click);
             // 
             // tbName
             // 
@@ -148,6 +150,7 @@ namespace CTS.ASCII_Proto_ETH
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add ASCII Proto ETH";
             ((System.ComponentModel.ISupportInitialize)(this.nudPort)).EndInit();
             this.ResumeLayout(false);
