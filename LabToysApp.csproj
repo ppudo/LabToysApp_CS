@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C511452F-A888-40E0-8765-4AF8D873C77C}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>LabToysApp</RootNamespace>
     <AssemblyName>LabToysApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -187,7 +187,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_BuildVersioningStyle="None.None.None.Increment" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" BuildVersion_StartDate="2021/10/26" />
+      <UserProperties BuildVersion_StartDate="2021/10/26" BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.None.Increment" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

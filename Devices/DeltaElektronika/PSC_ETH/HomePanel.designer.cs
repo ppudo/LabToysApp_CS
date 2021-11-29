@@ -111,11 +111,6 @@ namespace DeltaElektronika.PSC_ETH
             this.nudVoltage.Size = new System.Drawing.Size(100, 26);
             this.nudVoltage.TabIndex = 17;
             this.nudVoltage.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudVoltage.Value = new decimal(new int[] {
-            120,
-            0,
-            0,
-            65536});
             this.nudVoltage.ValueChanged += new System.EventHandler(this.nudVoltage_ValueChanged);
             // 
             // tbMeasuredVoltage
@@ -150,11 +145,6 @@ namespace DeltaElektronika.PSC_ETH
             this.nudCurrent.Size = new System.Drawing.Size(100, 26);
             this.nudCurrent.TabIndex = 20;
             this.nudCurrent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudCurrent.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            65536});
             this.nudCurrent.ValueChanged += new System.EventHandler(this.nudCurrent_ValueChanged);
             // 
             // tbMeasuredCurrent
