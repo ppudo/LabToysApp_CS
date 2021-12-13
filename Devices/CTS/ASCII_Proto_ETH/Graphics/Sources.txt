@@ -6,4 +6,5 @@
 Pixel perfect
 		home.png				- https://www.flaticon.com/free-icon/home_1828556					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		info.png				- https://www.flaticon.com/free-icon/info_1828558					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
+		refresh.png				- https://www.flaticon.com/free-icon/reload_1828593					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		

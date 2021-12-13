@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LabToys.CTS;
+using System.Threading;
 
 namespace CTS.ASCII_Proto_ETH
 {
@@ -54,6 +55,12 @@ namespace CTS.ASCII_Proto_ETH
         private string lang = "";
         private LabToys.CTS.ASCII_Proto_ETH device = null;
 
+        //Refresh thread
+        private bool refreshEnable = false;
+        private Thread refreshThread = null;
+        private int refreshPeriod = 100;                                                            //time in ms
+
+        #region FUNCTIONS
         //-------------------------------------------------------------------------------------------------------------------------------------------
         /// <summary>
         /// Set text elements in panel based on selected language
@@ -87,6 +94,45 @@ namespace CTS.ASCII_Proto_ETH
         }
 
         //-----------------------------------------------------------------------------------------
+        private void RefreshFunction()
+        {
+            //loop made every 100ms
+            while (refreshEnable)
+            {
+                //if (device.RefreshDeviceStatus(false))
+                //{
+                //    RefreshPanels();
+                //}
+
+                Thread.Sleep(refreshPeriod);
+            }
+
+            ////last read to close loop
+            //if (device.RefreshDeviceStatus(false))
+            //{
+            //    RefreshPanels();
+            //}
+
+            //abort thread and close connection
+            try
+            {
+                refreshThread.Abort();
+            }
+            catch (ThreadAbortException)
+            {
+                refreshThread = null;
+            }
+        }
+
+        //-----------------------------------------------------------------------------------------
+        private void RefreshPanels()
+        {
+            ((HomePanel)tsbtHome.Tag).DisplayDeviceStatus();
+        }
+        #endregion
+
+        #region ACTION_ITEMS
+        //-------------------------------------------------------------------------------------------------------------------------------------------
         private void tsbChangePanel_Click(object sender, EventArgs e)
         {
             ToolStripButton button = (ToolStripButton)sender;
@@ -98,5 +144,33 @@ namespace CTS.ASCII_Proto_ETH
                 tsASCIIprotoETH.Tag = button.Tag;
             }
         }
+
+        //-----------------------------------------------------------------------------------------
+        private void tsbtRefresh_Click(object sender, EventArgs e)
+        {
+            ToolStripButton btn = (ToolStripButton)sender;
+
+            if (refreshEnable == false)
+            {
+                refreshEnable = true;
+                btn.BackColor = Color.LightGreen;
+
+                if (refreshThread == null)
+                {
+                    refreshThread = new Thread(new ThreadStart(RefreshFunction))
+                    {
+                        IsBackground = true
+                    };
+                }
+                refreshThread.Start();
+            }
+            else
+            {
+                refreshEnable = false;
+                btn.BackColor = SystemColors.ControlDark;
+            }
+        }
+
+        #endregion
     }
 }

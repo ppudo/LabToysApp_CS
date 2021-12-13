@@ -21,7 +21,7 @@ Pixel perfect
 		home.png				- https://www.flaticon.com/free-icon/home_1828556					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		info.png				- https://www.flaticon.com/free-icon/info_1828558					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		plus.png				- https://www.flaticon.com/free-icon/plus_1828574					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
-		question.png			- https://www.flaticon.com/free-icon/question_1828587				- https://www.flaticon.com/authors/pixel-perfect
+		question.png			- https://www.flaticon.com/free-icon/question_1828587				- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		refresh.png				- https://www.flaticon.com/free-icon/reload_1828593					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		remove.png				- https://www.flaticon.com/free-icon/remove_1828595					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect
 		trigger.png				- https://www.flaticon.com/free-icon/finger_1828237					- https://www.flaticon.com/authors/pixel-perfect	- Pixel perfect

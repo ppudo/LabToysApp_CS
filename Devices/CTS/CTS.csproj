@@ -147,6 +147,7 @@
     <None Include="ASCII_Proto_ETH\Graphics\cryogenic.png" />
     <Content Include="ASCII_Proto_ETH\Graphics\home.png" />
     <Content Include="ASCII_Proto_ETH\Graphics\info.png" />
+    <None Include="ASCII_Proto_ETH\Graphics\refresh.png" />
     <Content Include="ASCII_Proto_ETH\Graphics\Sources.txt" />
     <None Include="ASCII_Proto_ETH\Graphics\standard.png" />
   </ItemGroup>

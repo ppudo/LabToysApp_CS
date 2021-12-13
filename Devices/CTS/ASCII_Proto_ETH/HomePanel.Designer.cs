@@ -180,7 +180,7 @@ namespace CTS.ASCII_Proto_ETH
             this.lbMemories.ItemHeight = 19;
             this.lbMemories.Location = new System.Drawing.Point(375, 36);
             this.lbMemories.Name = "lbMemories";
-            this.lbMemories.Size = new System.Drawing.Size(196, 118);
+            this.lbMemories.Size = new System.Drawing.Size(238, 118);
             this.lbMemories.TabIndex = 28;
             this.lbMemories.SelectedIndexChanged += new System.EventHandler(this.lbMemories_SelectedIndexChanged);
             // 
@@ -200,7 +200,7 @@ namespace CTS.ASCII_Proto_ETH
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(568, 313);
+            this.chart1.Size = new System.Drawing.Size(610, 313);
             this.chart1.TabIndex = 29;
             this.chart1.Text = "chart1";
             // 
@@ -215,7 +215,7 @@ namespace CTS.ASCII_Proto_ETH
             this.Controls.Add(this.gbTemp);
             this.Controls.Add(this.lbTitle);
             this.Name = "HomePanel";
-            this.Size = new System.Drawing.Size(574, 490);
+            this.Size = new System.Drawing.Size(616, 490);
             this.gbTemp.ResumeLayout(false);
             this.gbTemp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudTemp)).EndInit();

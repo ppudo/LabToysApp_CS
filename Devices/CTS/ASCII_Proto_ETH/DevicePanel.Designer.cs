@@ -32,11 +32,12 @@ namespace CTS.ASCII_Proto_ETH
             this.tsASCIIprotoETH = new System.Windows.Forms.ToolStrip();
             this.tslName = new System.Windows.Forms.ToolStripLabel();
             this.tstbError = new System.Windows.Forms.ToolStripTextBox();
+            this.tsContainer = new System.Windows.Forms.ToolStripContainer();
             this.tsbtHome = new System.Windows.Forms.ToolStripButton();
             this.tsbtCommon = new System.Windows.Forms.ToolStripButton();
             this.tsbtInfo = new System.Windows.Forms.ToolStripButton();
             this.tsbtDebug = new System.Windows.Forms.ToolStripButton();
-            this.tsContainer = new System.Windows.Forms.ToolStripContainer();
+            this.tsbtRefresh = new System.Windows.Forms.ToolStripButton();
             this.tsASCIIprotoETH.SuspendLayout();
             this.tsContainer.TopToolStripPanel.SuspendLayout();
             this.tsContainer.SuspendLayout();
@@ -52,10 +53,11 @@ namespace CTS.ASCII_Proto_ETH
             this.tsbtCommon,
             this.tsbtInfo,
             this.tsbtDebug,
-            this.tstbError});
+            this.tstbError,
+            this.tsbtRefresh});
             this.tsASCIIprotoETH.Location = new System.Drawing.Point(3, 0);
             this.tsASCIIprotoETH.Name = "tsASCIIprotoETH";
-            this.tsASCIIprotoETH.Size = new System.Drawing.Size(327, 25);
+            this.tsASCIIprotoETH.Size = new System.Drawing.Size(381, 25);
             this.tsASCIIprotoETH.TabIndex = 2;
             // 
             // tslName
@@ -70,6 +72,23 @@ namespace CTS.ASCII_Proto_ETH
             this.tstbError.Name = "tstbError";
             this.tstbError.ReadOnly = true;
             this.tstbError.Size = new System.Drawing.Size(100, 25);
+            // 
+            // tsContainer
+            // 
+            // 
+            // tsContainer.ContentPanel
+            // 
+            this.tsContainer.ContentPanel.Size = new System.Drawing.Size(567, 332);
+            this.tsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tsContainer.Location = new System.Drawing.Point(0, 0);
+            this.tsContainer.Name = "tsContainer";
+            this.tsContainer.Size = new System.Drawing.Size(567, 357);
+            this.tsContainer.TabIndex = 3;
+            this.tsContainer.Text = "toolStripContainer1";
+            // 
+            // tsContainer.TopToolStripPanel
+            // 
+            this.tsContainer.TopToolStripPanel.Controls.Add(this.tsASCIIprotoETH);
             // 
             // tsbtHome
             // 
@@ -108,22 +127,15 @@ namespace CTS.ASCII_Proto_ETH
             this.tsbtDebug.Size = new System.Drawing.Size(23, 22);
             this.tsbtDebug.Click += new System.EventHandler(this.tsbChangePanel_Click);
             // 
-            // tsContainer
+            // tsbtRefresh
             // 
-            // 
-            // tsContainer.ContentPanel
-            // 
-            this.tsContainer.ContentPanel.Size = new System.Drawing.Size(567, 332);
-            this.tsContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tsContainer.Location = new System.Drawing.Point(0, 0);
-            this.tsContainer.Name = "tsContainer";
-            this.tsContainer.Size = new System.Drawing.Size(567, 357);
-            this.tsContainer.TabIndex = 3;
-            this.tsContainer.Text = "toolStripContainer1";
-            // 
-            // tsContainer.TopToolStripPanel
-            // 
-            this.tsContainer.TopToolStripPanel.Controls.Add(this.tsASCIIprotoETH);
+            this.tsbtRefresh.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tsbtRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtRefresh.Image = global::CTS.Properties.Resources.refresh;
+            this.tsbtRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtRefresh.Name = "tsbtRefresh";
+            this.tsbtRefresh.Size = new System.Drawing.Size(23, 22);
+            this.tsbtRefresh.Click += new System.EventHandler(this.tsbtRefresh_Click);
             // 
             // DevicePanel
             // 
@@ -152,5 +164,6 @@ namespace CTS.ASCII_Proto_ETH
         private System.Windows.Forms.ToolStripButton tsbtDebug;
         private System.Windows.Forms.ToolStripTextBox tstbError;
         private System.Windows.Forms.ToolStripContainer tsContainer;
+        private System.Windows.Forms.ToolStripButton tsbtRefresh;
     }
 }
