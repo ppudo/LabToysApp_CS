@@ -331,7 +331,13 @@ namespace DeltaElektronika.PSC_ETH
             EditSequenceForm form = new EditSequenceForm(LANGUAGE);
             if (form.ShowDialog() == DialogResult.OK )
             {
-                dgvSequence.Tag = form.SequenceSteps;
+                Cursor.Current = Cursors.WaitCursor;
+
+                if (!device.SendSequence(form.SequenceName, form.SequenceSteps))
+                {
+                    Cursor.Current = Cursors.Default;
+                }
+
                 tbSequenceName.Text = form.SequenceName;
             }
         }
